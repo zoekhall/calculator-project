@@ -18,18 +18,14 @@ body {
 }
 
 .calculator {
-  background-image: url('calculator_background.jpeg');
-  background-size: cover;
-  width: 320px;
+  background-color: #2a2a2a;
+  width: 240px;
   max-width: 100%;
-  /* padding: 20px; */
+  padding: 15px;
   border-radius: 12px;
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.3),
-    0 5px 15px rgba(0, 0, 0, 0.2),
-    0 2px 5px rgba(0, 0, 0, 0.15),
-    inset 0 2px 3px rgba(255, 255, 255, 0.4),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 2px solid #B8B8B8;
   position: relative;
 }
