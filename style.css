@@ -29,6 +29,27 @@ body {
   border: 2px solid #333;
   min-height: 500px;
   position: relative;
+  clip-path: polygon(0% 0%,
+        /* top left */
+        100% 0%,
+        /* top right */
+        100% 30%,
+        /* right side to waist start */
+        95% 50%,
+        /* narrow waist right */
+        100% 70%,
+        /* right side after waist */
+        100% 100%,
+        /* bottom right */
+        0% 100%,
+        /* bottom left */
+        0% 70%,
+        /* left side after waist */
+        5% 50%,
+        /* narrow waist left */
+        0% 30%
+        /* left side to waist start */
+      );
 }
 
 .display-section {
@@ -41,19 +62,16 @@ body {
 }
 
 .mode-section {
-  width: 95%;
+  width: 85%;
   margin: 0 auto 10px auto;
-  /* Center it */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
 }
 
 .scientific-section {
-  width: 90%;
-  /* Narrowest part */
+  width: 75%;
   margin: 0 auto 12px auto;
-  /* Center it */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
@@ -61,7 +79,6 @@ body {
 
 .number-section {
   width: 100%;
-  /* Back to full width */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
