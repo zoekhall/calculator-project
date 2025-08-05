@@ -62,34 +62,35 @@ body {
 }
 
 .mode-section {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 10px auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
+  gap: 4px;
 }
 
 .scientific-section {
-  width: 75%;
+  width: 70%;
   margin: 0 auto 12px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 6px;
 }
 
 .number-section {
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
 .control-section {
-  width: 100%;
+  width: 95%;
+  margin: 12px auto 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-top: 12px;
 }
 
 .buttons {
