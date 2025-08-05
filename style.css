@@ -17,15 +17,16 @@ body {
   padding: 20px;
 }
 
+.calculator-wrapper {
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
+}
+
 .calculator {
   background-color: #1a1a1a;
   width: 320px;
   max-width: 100%;
   padding: 20px;
   border-radius: 25px 25px 20px 20px;
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.4),
-    inset 0 2px 0 rgba(255, 255, 255, 0.1);
   border: 2px solid #333;
   min-height: 500px;
   position: relative;
@@ -85,7 +86,7 @@ body {
 }
 
 .scientific-section {
-  width: 70%;
+  width: 85%;
   margin: 0 auto 12px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -97,7 +98,6 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   gap: 8px;
 }
 
@@ -179,7 +179,7 @@ body {
 
 /* Enter button */
 .enter {
-  grid-row: span 2;
+  grid-column: span 2;
   background-color: #4A90C2;
   color: white;
 }
