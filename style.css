@@ -59,6 +59,14 @@ body {
   gap: 8px;
 }
 
+.number-section {
+  width: 100%;
+  /* Back to full width */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
