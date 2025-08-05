@@ -93,12 +93,6 @@ body {
   gap: 8px;
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
 .btn {
   height: 35px;
   border: none;
@@ -110,18 +104,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.add, .equals {
-  grid-column: span 2;
-}
-
-.operator, .equals {
-  background-color: rgb(223, 136, 22);
-}
-
-.clear {
-  background-color: lightgray;
-}
-
+/* Number buttons */
 .number {
   background-color: #E8E8E8;
   color: #000;
@@ -132,31 +115,34 @@ body {
   background-color: #F0F0F0;
 }
 
+/* Scientific buttons - blue */
 .scientific {
   background-color: #4A90C2;
   color: white;
   font-size: 9px;
-  /* Smaller text for function names */
 }
 
 .scientific:hover {
   background-color: #5BA0D2;
 }
 
+/* Operator buttons */
 .operator {
-  background-color: #666;
+  background-color: #FF8500;
   color: white;
 }
 
 .operator:hover {
-  background-color: #777;
+  background-color: #FF9500;
 }
 
+/* Clear button */
 .clear {
   background-color: #D44;
   color: white;
 }
 
+/* Mode and arrow buttons */
 .mode,
 .arrow {
   background-color: #999;
@@ -164,8 +150,17 @@ body {
   font-size: 9px;
 }
 
-.enter,
-.equals {
+/* Enter button */
+.enter {
   background-color: #4A90C2;
   color: white;
+}
+
+/* Brand styling */
+.brand {
+  text-align: center;
+  font-size: 9px;
+  color: #AAA;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
 }
