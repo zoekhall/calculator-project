@@ -7,9 +7,9 @@
 
 body {
   background-image: url('wood_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +18,20 @@ body {
 }
 
 .calculator {
-  background-color: #1a1a1a;
+  background-image: url('calculator_background.jpeg');
+  background-size: cover;
   width: 320px;
   max-width: 100%;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    0 2px 5px rgba(0, 0, 0, 0.15),
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #B8B8B8;
+  position: relative;
 }
 
 #display {
@@ -60,4 +68,17 @@ body {
   color: #1a1a1a;
   transition: all 0.2s ease;
   outline: none;
+}
+
+.number, .decimal {
+  background-color: rgb(65, 61, 61);
+  color: whitesmoke
+}
+
+.operator, .equals {
+  background-color: rgb(223, 136, 22);
+}
+
+.clear {
+  background-color: lightgray;
 }
