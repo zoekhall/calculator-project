@@ -61,6 +61,21 @@ body {
   border: 1px solid #CCC;
 }
 
+#display {
+  width: 100%;
+  height: 40px;
+  background-color: #2D2D2D;
+  color: #00FF00;
+  /* Green LCD text like real calculators */
+  border: none;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  text-align: right;
+  padding: 0 10px;
+  border-radius: 3px;
+  outline: none;
+}
+
 .mode-section {
   width: 90%;
   margin: 0 auto 10px auto;
