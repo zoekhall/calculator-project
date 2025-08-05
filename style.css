@@ -114,15 +114,58 @@ body {
   grid-column: span 2;
 }
 
-.number, .decimal {
-  background-color: rgb(65, 61, 61);
-  color: whitesmoke
-}
-
 .operator, .equals {
   background-color: rgb(223, 136, 22);
 }
 
 .clear {
   background-color: lightgray;
+}
+
+.number {
+  background-color: #E8E8E8;
+  color: #000;
+  border: 1px solid #CCC;
+}
+
+.number:hover {
+  background-color: #F0F0F0;
+}
+
+.scientific {
+  background-color: #4A90C2;
+  color: white;
+  font-size: 9px;
+  /* Smaller text for function names */
+}
+
+.scientific:hover {
+  background-color: #5BA0D2;
+}
+
+.operator {
+  background-color: #666;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #777;
+}
+
+.clear {
+  background-color: #D44;
+  color: white;
+}
+
+.mode,
+.arrow {
+  background-color: #999;
+  color: white;
+  font-size: 9px;
+}
+
+.enter,
+.equals {
+  background-color: #4A90C2;
+  color: white;
 }
