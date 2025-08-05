@@ -30,26 +30,26 @@ body {
   min-height: 500px;
   position: relative;
   clip-path: polygon(0% 0%,
-        /* top left */
-        100% 0%,
-        /* top right */
-        100% 30%,
-        /* right side to waist start */
-        95% 50%,
-        /* narrow waist right */
-        100% 70%,
-        /* right side after waist */
-        100% 100%,
-        /* bottom right */
-        0% 100%,
-        /* bottom left */
-        0% 70%,
-        /* left side after waist */
-        5% 50%,
-        /* narrow waist left */
-        0% 30%
-        /* left side to waist start */
-      );
+      /* top left */
+      100% 0%,
+      /* top right */
+      100% 35%,
+      /* less aggressive curve start */
+      97% 50%,
+      /* less pinched waist */
+      100% 65%,
+      /* less aggressive curve end */
+      100% 100%,
+      /* bottom right */
+      0% 100%,
+      /* bottom left */
+      0% 65%,
+      /* left side curve */
+      3% 50%,
+      /* left side waist */
+      0% 35%
+      /* left side curve start */
+    );
 }
 
 .display-section {
@@ -97,6 +97,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 8px;
 }
 
@@ -178,6 +179,7 @@ body {
 
 /* Enter button */
 .enter {
+  grid-row: span 2;
   background-color: #4A90C2;
   color: white;
 }
