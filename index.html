@@ -7,33 +7,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-      <input type="text" id="display" readonly value="0">
-      <div class="buttons">
-        <button class="btn clear" data-action="clear">C</button>
-        <button class="btn" data-action="toggle-sign">±</button>
-        <button class="btn" data-action="percent">%</button>
-        <button class="btn operator" data-action="divide">÷</button>
+<div class="buttons">
+  <!-- --------------------- Row 1: Top function buttons --------------------- -->
+  <button class="btn secondary" data-action="2nd">2nd</button>
+  <button class="btn secondary" data-action="mode">MODE</button>
+  <button class="btn secondary" data-action="del">DEL</button>
+  <button class="btn secondary" data-action="on">ON</button>
 
-        <button class="btn number" data-number="7">7</button>
-        <button class="btn number" data-number="8">8</button>
-        <button class="btn number" data-number="9">9</button>
-        <button class="btn operator" data-action="multiply">×</button>
+  <!-- --------------------- Row 2: Scientific functions --------------------- -->
+  <button class="btn scientific" data-action="alpha">ALPHA</button>
+  <button class="btn scientific" data-action="stat">STAT</button>
+  <button class="btn scientific" data-action="math">MATH</button>
+  <button class="btn clear" data-action="clear">CLEAR</button>
 
-        <button class="btn number" data-number="4">4</button>
-        <button class="btn number" data-number="5">5</button>
-        <button class="btn number" data-number="6">6</button>
-        <button class="btn operator" data-action="subtract">−</button>
+  <!-- ------------------ Row 3: More scientific functions ------------------- -->
+  <button class="btn scientific" data-action="sin">SIN</button>
+  <button class="btn scientific" data-action="cos">COS</button>
+  <button class="btn scientific" data-action="tan">TAN</button>
+  <button class="btn operator" data-action="divide">÷</button>
 
-        <button class="btn number" data-number="1">1</button>
-        <button class="btn number" data-number="2">2</button>
-        <button class="btn number" data-number="3">3</button>
-        <button class="btn operator" data-action="add">+</button>
+  <!-- ----------------------- Row 4: Powers and roots ----------------------- -->
+  <button class="btn scientific" data-action="ln">LN</button>
+  <button class="btn scientific" data-action="log">LOG</button>
+  <button class="btn scientific" data-action="square">x²</button>
+  <button class="btn operator" data-action="multiply">×</button>
 
-        <button class="btn number zero" data-number="0">0</button>
-        <button class="btn decimal" data-action="decimal">.</button>
-        <button class="btn equals" data-action="equals">=</button>
-      </div>
+  <!-- ------------------------ Row 5: More functions ------------------------ -->
+  <button class="btn scientific" data-action="sqrt">√</button>
+  <button class="btn number" data-number="7">7</button>
+  <button class="btn number" data-number="8">8</button>
+  <button class="btn number" data-number="9">9</button>
+
+  <!-- ------------------- Row 6: Parentheses and numbers -------------------- -->
+  <button class="btn scientific" data-action="open-paren">(</button>
+  <button class="btn number" data-number="4">4</button>
+  <button class="btn number" data-number="5">5</button>
+  <button class="btn number" data-number="6">6</button>
+
+  <!-- ------------------------ Row 7: More functions ------------------------ -->
+  <button class="btn scientific" data-action="close-paren">)</button>
+  <button class="btn number" data-number="1">1</button>
+  <button class="btn number" data-number="2">2</button>
+  <button class="btn number" data-number="3">3</button>
+
+  <!-- -------------------------- Row 8: Bottom row -------------------------- -->
+  <button class="btn scientific" data-action="sto">STO</button>
+  <button class="btn number zero" data-number="0">0</button>
+  <button class="btn decimal" data-action="decimal">.</button>
+  <button class="btn scientific" data-action="negative">(-)</button>
+
+  <!-- ----------------------- Right column operators ------------------------ -->
+  <button class="btn operator subtract" data-action="subtract">−</button>
+  <button class="btn operator add" data-action="add">+</button>
+  <button class="btn operator equals" data-action="equals">=</button>
+</div>
     <script src="script.js"></script>
 </body>
 </html> 
