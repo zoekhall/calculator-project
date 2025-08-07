@@ -1,11 +1,11 @@
 // state variables
-let currentNumber = 0;
-let previousNumber = 0;
+let currentNumber = '0';
+let previousNumber = null;
 let operator = null;
 let pendingInput = false;
 
-// variables
-const display = document.getElementById('display').value;
+//Get DOM elements
+const display = document.getElementById('display');
 const calculator = document.querySelector('.calculator');
 
 // event listener
@@ -23,8 +23,11 @@ calculator.addEventListener('click', function (event) {
 
 //function
 function handleNumbers(num) {
-  
+  display_val = display.value
+  console.log(display)
 }
+
+
 
 function handleActions(action) {
   
