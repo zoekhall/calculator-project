@@ -21,10 +21,16 @@ calculator.addEventListener('click', function (event) {
     
 });
 
-//function
+// handle number buttons
 function handleNumbers(num) {
-  display_val = display.value
-  console.log(display)
+  if (pendingInput || currentNumber === '0') {
+    currentNumber = num;
+    pendingInput = false;
+  } else {
+    currentNumber += num; 
+  }
+
+  updateDisplay()
 }
 
 
