@@ -8,7 +8,12 @@ let pendingInput = false;
 const display = document.getElementById('display');
 const calculator = document.querySelector('.calculator');
 
-// event listener
+//Update display
+function updateDisplay() {
+  display.value = currentNumber;
+}
+
+//Button 'click' event listener
 calculator.addEventListener('click', function (event) {
   const button = event.target;
   if(button.matches('button')){
