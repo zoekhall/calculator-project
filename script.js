@@ -8,9 +8,19 @@ let pendingInput = false;
 const display = document.getElementById('display');
 const calculator = document.querySelector('.calculator');
 
-//Update display
+//Helper functions
 function updateDisplay() {
   display.value = currentNumber;
+}
+
+function calculate(strNum1, strNum2, operator) {
+  num1 = parseFloat(strNum1);
+  num2 = parseFloat(strNum2);
+
+  switch (operator) {
+    case 'add':
+      return (num1 + num2).toString();
+  }
 }
 
 //Button 'click' event listener
@@ -34,7 +44,6 @@ function handleNumbers(num) {
   } else {
     currentNumber += num; 
   }
-
   updateDisplay()
 }
 
@@ -50,8 +59,13 @@ function handleActions(action) {
       break;
     case 'decimal': //add decimal if one not already used
       if (!currentNumber.includes('.')) {
-        currentNumber += '.'
+        currentNumber += '.';
       }
+      break;
+    // case 'equals':
+    //   if (operator && previousNumber !== null) { 
+
+    //   }
   }
 }
 
