@@ -90,6 +90,7 @@ function handleActions(action) {
       operator = action;
       pendingInput = true;
       break;
+    case 'square':
   }
   updateDisplay();
 }
