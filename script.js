@@ -63,9 +63,17 @@ function handleActions(action) {
       }
       break;
     // case 'equals':
-    //   if (operator && previousNumber !== null) { 
+    //   if (operator && previousNumber !== null) {
 
     //   }
+    case 'add':
+    case 'subtract':
+    case 'multiply':
+    case 'divide':
+      previousNumber = currentNumber;
+      operator = action;
+      pendingInput = true;
+      break;
   }
 }
 
