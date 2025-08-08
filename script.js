@@ -14,8 +14,7 @@ function updateDisplay() {
 }
 
 function calculate(strNum1, strNum2, operator) {
-  num1 = parseFloat(strNum1);
-  num2 = parseFloat(strNum2);
+  let num1 = parseFloat(strNum1), num2 = parseFloat(strNum2);
 
   switch (operator) {
     case 'add':
@@ -84,6 +83,9 @@ function handleActions(action) {
     case 'subtract':
     case 'multiply':
     case 'divide':
+      if (operator !== null && previousNumber !== null && !pendingInput) {
+        currentNumber = calculate(previousNumber, currentNumber, operator)
+      }
       previousNumber = currentNumber;
       operator = action;
       pendingInput = true;
