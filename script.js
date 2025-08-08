@@ -41,7 +41,14 @@ function handleNumbers(num) {
 
 
 function handleActions(action) {
-  
+  switch (action) {
+    case 'clear':
+      currentNumber = '0';
+      previousNumber = null;
+      operator = null;
+      pendingInput = false;
+      break;
+  }
 }
 
 
