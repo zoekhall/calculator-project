@@ -28,7 +28,7 @@ function calculate(strNum1, strNum2, operator) {
       if (num2 == 0) {
         return (num1 == 0) ? 'indeterminate' : 'undefined';
       } else {
-        return num1 / num2;
+        return (num1 / num2).toString();
       }
   }
 }
@@ -72,10 +72,14 @@ function handleActions(action) {
         currentNumber += '.';
       }
       break;
-    // case 'equals':
-    //   if (operator && previousNumber !== null) {
-
-    //   }
+    case 'equals':
+      if (operator && previousNumber !== null) { 
+        currentNumber = calculate(previousNumber, currentNumber, operator)
+      }
+      operator = null;
+			previousNumber = null;
+			pendingInput = true;
+      break;
     case 'add':
     case 'subtract':
     case 'multiply':
@@ -85,6 +89,7 @@ function handleActions(action) {
       pendingInput = true;
       break;
   }
+  updateDisplay();
 }
 
 
