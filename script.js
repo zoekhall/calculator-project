@@ -42,12 +42,16 @@ function handleNumbers(num) {
 
 function handleActions(action) {
   switch (action) {
-    case 'clear':
+    case 'clear': //reset clear
       currentNumber = '0';
       previousNumber = null;
       operator = null;
       pendingInput = false;
       break;
+    case 'decimal': //add decimal if one not already used
+      if (!currentNumber.includes('.')) {
+        currentNumber += '.'
+      }
   }
 }
 
