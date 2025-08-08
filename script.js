@@ -20,6 +20,16 @@ function calculate(strNum1, strNum2, operator) {
   switch (operator) {
     case 'add':
       return (num1 + num2).toString();
+    case 'subtract':
+      return (num1 - num2).toString();
+    case 'multiply':
+      return (num1 * num2).toString();
+    case 'divide':
+      if (num2 == 0) {
+        return (num1 == 0) ? 'indeterminate' : 'undefined';
+      } else {
+        return num1 / num2;
+      }
   }
 }
 
