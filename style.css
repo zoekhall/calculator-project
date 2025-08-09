@@ -68,3 +68,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* Default 5 columns */
+  gap: 4px;
+  margin-bottom: 6px;
+}
