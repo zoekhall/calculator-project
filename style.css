@@ -153,3 +153,37 @@ body {
   grid-column: span 2;
   font-size: 12px;
 }
+
+/* Button type specific styling */
+.mode {
+  font-size: 9px;
+}
+
+.scientific {
+  font-size: 8px;
+}
+
+.operator {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.enter,
+.equals {
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.clear {
+  font-size: 8px;
+}
+
+.number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.decimal {
+  font-size: 16px;
+  font-weight: bold;
+}
