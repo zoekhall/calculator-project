@@ -165,9 +165,13 @@ body {
 
 /* Enter button */
 .enter {
-  grid-column: span 2;
   background-color: #4A90C2;
   color: white;
+}
+
+/* Equals */
+.equals {
+  grid-column: span 2;
 }
 
 /* Brand styling */
@@ -177,4 +181,9 @@ body {
   color: #AAA;
   margin-bottom: 8px;
   font-family: Arial, sans-serif;
+}
+
+.scientific-section {
+  grid-template-columns: repeat(5, 1fr);
+  /* Change from 4 to 5 */
 }
