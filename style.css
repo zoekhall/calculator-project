@@ -23,33 +23,33 @@ body {
 .calculator {
   background: url('images/black_plastic_background.jpg'), linear-gradient(145deg, #222, #111);
   background-size: cover;
-  width: 260px;
-  padding: 15px 15px 25px 15px;
-  border-radius: 24px;
-  border: 2px solid #333;
-  min-height: 520px;
+  width: 400px;
+  padding: 25px 25px 35px 25px;
+  border-radius: 32px;
+  border: 3px solid #333;
+  min-height: 750px;
   position: relative;
   clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 97% 50%, 100% 65%, 100% 100%, 0% 100%, 0% 65%, 3% 50%, 0% 35%);
 }
 
 .display-section {
   background: linear-gradient(#f6f7f6, #e9e9e6);
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 4px solid #f4f4f4;
-  margin-bottom: 12px;
+  padding: 15px 18px;
+  border-radius: 18px;
+  border: 5px solid #f4f4f4;
+  margin-bottom: 18px;
 }
 
 #display {
   background: linear-gradient(to bottom, #dfe8dc, #cfdac6);
-  font-size: 24px;
-  border-radius: 6px;
-  padding: 0 14px;
-  line-height: 44px;
-  height: 44px;
+  font-size: 32px;
+  border-radius: 8px;
+  padding: 0 20px;
+  line-height: 60px;
+  height: 60px;
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid #d9d9d9;
+  border: 3px solid #d9d9d9;
   color: #0b0b0b;
   text-align: right;
   font-family: Arial, Helvetica, sans-serif;
@@ -58,7 +58,7 @@ body {
 /* Brand styling */
 .brand {
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   color: #AAA;
   margin-bottom: 6px;
@@ -70,8 +70,8 @@ body {
 .button-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 15px;
   position: relative;
 }
 
@@ -82,22 +82,21 @@ body {
 }
 
 .spacer {
-  height: 32px;
+  height: 45px;
 }
 
 /* Arrow cluster styling */
-/* Arrow cluster spans columns 4-5, rows 1-2 */
 .arrow-cluster {
   position: absolute;
-  top: 116px;
-  left: calc(60% - 2px);
-  width: calc(40% - 6px);
-  height: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 2px;
-  z-index: 10;
+    top: 165px;
+    left: calc(60% - 3px);
+    width: calc(40% - 4px);
+    height: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    z-index: 10;
 }
 
 .arrow-up {
@@ -122,16 +121,16 @@ body {
 
 /* Base button styling */
 .btn {
-  height: 32px;
-  min-height: 32px;
-  font-size: 11px;
+  height: 45px;
+  min-height: 45px;
+  font-size: 14px;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
-  padding: 0 6px;
+  padding: 0 8px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
@@ -173,7 +172,7 @@ body {
 .black {
   background-color: #1b1f2a;
   color: white;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .small:hover,
@@ -183,38 +182,32 @@ body {
 
 /* Button type specific styling */
 .mode {
-  font-size: 9px;
+  font-size: 12px;
 }
 
-.scientific {
-  font-size: 8px;
+.scientific, .clear {
+  font-size: 10px;
 }
 
-.operator {
-  font-size: 14px;
+.operator, .number {
+  font-size: 18px;
   font-weight: bold;
 }
 
 .enter,
 .equals {
-  font-size: 9px;
-  font-weight: bold;
-}
-
-.clear {
-  font-size: 8px;
-}
-
-.number {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .decimal {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .arrow {
-  font-size: 10px;
+  font-size: 13px;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
 }
