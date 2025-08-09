@@ -83,3 +83,24 @@ body {
 #row-9 {
   grid-template-columns: 1fr 2fr 1fr 1fr; /* 0 button spans 2 */
 }
+
+/* Base button styling */
+.btn {
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
