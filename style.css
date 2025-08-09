@@ -40,7 +40,17 @@ body {
   border-radius: 15px 15px 5px 5px;
   margin-bottom: 12px;
   border: 1px solid #CCC;
-  /* grid-row: span 2; figure out how to make display bigger */
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.empty {
+  /* Placeholder for empty grid cells */
 }
 
 #display {
@@ -66,28 +76,6 @@ body {
   color: #AAA;
   margin-bottom: 8px;
   font-family: Arial, sans-serif;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Default 5 columns */
-  gap: 4px;
-  margin-bottom: 6px;
-}
-
-/* Specific row layouts */
-#row-1 {
-  grid-template-columns: repeat(7, 1fr);
-    /* 7 columns: 2nd, DRG, DEL, ▲, ▼, ◄, ► */
-}
-
-#row-2 {
-  grid-template-columns: repeat(4, 1fr);
-  /* 4 columns: LOG, PRB, •••, ÷ */
-}
-
-#row-9 {
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* ON, 0, ., (-) */
 }
 
 /* Base button styling */
@@ -148,16 +136,6 @@ body {
 
 .black:hover {
   background-color: #333;
-}
-
-/* Special spanning buttons */
-.zero {
-  grid-column: span 2;
-}
-
-.arrows {
-  grid-column: span 1;
-  font-size: 10px;
 }
 
 /* Button type specific styling */
