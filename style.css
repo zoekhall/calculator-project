@@ -40,6 +40,7 @@ body {
   border-radius: 15px 15px 5px 5px;
   margin-bottom: 12px;
   border: 1px solid #CCC;
+  /* grid-row: span 2; figure out how to make display bigger */
 }
 
 #display {
@@ -47,7 +48,7 @@ body {
   height: 40px;
   background: url('images/calculator_screen_background.jpg');
   background-size: cover;
-  color: #00FF00;
+  color: #101010;
   border: none;
   font-family: 'Courier New', monospace;
   font-size: 25px;
@@ -57,3 +58,13 @@ body {
   border-radius: 3px;
   outline: none;
 }
+
+/* Brand styling */
+.brand {
+  text-align: center;
+  font-size: 9px;
+  color: #AAA;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+}
+
