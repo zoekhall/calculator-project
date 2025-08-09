@@ -77,11 +77,17 @@ body {
 
 /* Specific row layouts */
 #row-1 {
-  grid-template-columns: 1fr 1fr 1fr 2fr; /* arrows span 2 */
+  grid-template-columns: repeat(7, 1fr);
+    /* 7 columns: 2nd, DRG, DEL, ▲, ▼, ◄, ► */
+}
+
+#row-2 {
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns: LOG, PRB, •••, ÷ */
 }
 
 #row-9 {
-  grid-template-columns: 1fr 2fr 1fr 1fr; /* 0 button spans 2 */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* ON, 0, ., (-) */
 }
 
 /* Base button styling */
@@ -150,8 +156,8 @@ body {
 }
 
 .arrows {
-  grid-column: span 2;
-  font-size: 12px;
+  grid-column: span 1;
+  font-size: 10px;
 }
 
 /* Button type specific styling */
