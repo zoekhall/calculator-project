@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -24,7 +23,6 @@ body {
 .calculator {
   background: url('images/black_plastic_background.jpg'), linear-gradient(145deg, #222, #111);
   background-size: cover;
-  background-position: center;
   width: 320px;
   max-width: 100%;
   padding: 20px;
@@ -32,9 +30,6 @@ body {
   border: 2px solid #333;
   min-height: 500px;
   position: relative;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
   clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 97% 50%, 100% 65%, 100% 100%, 0% 100%, 0% 65%, 3% 50%, 0% 35%);
 }
 
@@ -52,7 +47,7 @@ body {
   height: 40px;
   background: url('images/calculator_screen_background.jpg');
   background-size: cover;
-  color: #1a1a1a;
+  color: #00FF00;
   border: none;
   font-family: 'Courier New', monospace;
   font-size: 25px;
@@ -61,129 +56,4 @@ body {
   padding: 0 10px;
   border-radius: 3px;
   outline: none;
-}
-
-.mode-section {
-  width: 90%;
-  margin: 0 auto 10px auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-}
-
-.scientific-section {
-  width: 85%;
-  margin: 0 auto 12px auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-}
-
-.number-section {
-  width: 95%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.control-section {
-  width: 95%;
-  margin: 12px auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.btn {
-  height: 35px;
-  border: none;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.1s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Number buttons */
-.number {
-  background-color: #E8E8E8;
-  color: #000;
-  border: 1px solid #CCC;
-}
-
-.number:hover {
-  background-color: #F0F0F0;
-}
-
-/* Scientific buttons - blue */
-.scientific {
-  background-color: #4A90C2;
-  color: white;
-  font-size: 9px;
-}
-
-.scientific:hover {
-  background-color: #5BA0D2;
-}
-
-/* Operator buttons */
-.operator {
-  background-color: #FF8500;
-  color: white;
-}
-
-.operator:hover {
-  background-color: #FF9500;
-}
-
-/* Clear button */
-.clear {
-  background-color: #D44;
-  color: white;
-}
-
-/* Mode and arrow buttons */
-.mode,
-.arrow {
-  background-color: #999;
-  color: white;
-  font-size: 9px;
-}
-
-/* Decimal button*/
-.decimal {
-  background-color: #E8E8E8;
-  color: #000;
-  border: 1px solid #CCC;
-}
-
-.decimal:hover {
-  background-color: #F0F0F0;
-}
-
-/* Enter button */
-.enter {
-  background-color: #4A90C2;
-  color: white;
-}
-
-/* Equals */
-.equals {
-  grid-column: span 2;
-}
-
-/* Brand styling */
-.brand {
-  text-align: center;
-  font-size: 9px;
-  color: #AAA;
-  margin-bottom: 8px;
-  font-family: Arial, sans-serif;
-}
-
-.scientific-section {
-  grid-template-columns: repeat(5, 1fr);
-  /* Change from 4 to 5 */
 }
