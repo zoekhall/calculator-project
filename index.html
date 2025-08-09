@@ -31,43 +31,45 @@
         <button class="btn scientific" data-action="sin">SIN</button>
         <button class="btn scientific" data-action="cos">COS</button>
         <button class="btn scientific" data-action="tan">TAN</button>
-        <button class="btn operator" data-action="divide">÷</button>
         
         <!-- Row 2: Log functions -->
         <button class="btn scientific" data-action="ln">LN</button>
         <button class="btn scientific" data-action="log">LOG</button>
         <button class="btn scientific" data-action="square">x²</button>
-        <button class="btn operator" data-action="multiply">×</button>
         
         <!-- Row 3: More functions -->
         <button class="btn scientific" data-action="sqrt">√</button>
         <button class="btn scientific" data-action="power">yx</button>
         <button class="btn scientific" data-action="paren">()</button>
-        <button class="btn operator" data-action="subtract">−</button>
       </div>
-        
+      
       <!-- --------------------- BOTTOM SECTION - number pad --------------------- -->
       <div class="number-section">
-        <!-- Row 1: 7,8,9 and + -->
+        <!-- Row 1: 7,8,9 and ÷ -->
         <button class="btn number" data-number="7">7</button>
         <button class="btn number" data-number="8">8</button>
         <button class="btn number" data-number="9">9</button>
-        <button class="btn operator add" data-action="add">+</button>
-      
-        <!-- Row 2: 4,5,6 -->
+        <button class="btn operator" data-action="divide">÷</button>
+        
+        <!-- Row 2: 4,5,6, and * -->
         <button class="btn number" data-number="4">4</button>
         <button class="btn number" data-number="5">5</button>
         <button class="btn number" data-number="6">6</button>
-      
-        <!-- Row 3: 1,2,3 and ENTER -->
+        <button class="btn operator" data-action="multiply">×</button>
+        
+        <!-- Row 3: 1,2,3 and - -->
         <button class="btn number" data-number="1">1</button>
         <button class="btn number" data-number="2">2</button>
         <button class="btn number" data-number="3">3</button>
-        <button class="btn enter" data-action="enter">ENTER</button>
-      
-        <!-- Row 4: 0, decimal, negative, equals -->
+        <button class="btn operator" data-action="subtract">−</button>
+        
+        <!-- Row 4: 0, decimal, ENTER, + -->
         <button class="btn number zero" data-number="0">0</button>
         <button class="btn decimal" data-action="decimal">.</button>
+        <button class="btn enter" data-action="enter">ENTER</button>
+        <button class="btn operator add" data-action="add">+</button>
+
+        <!-- Row 5: 0, negative, equals (span 2) -->
         <button class="btn scientific" data-action="negative">(-)</button>
         <button class="btn operator equals" data-action="equals">=</button>
       </div>
