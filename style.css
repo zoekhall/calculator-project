@@ -70,8 +70,16 @@ body {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* Default 5 columns */
+  grid-template-columns: repeat(5, 1fr); /* Default 5 columns */
   gap: 4px;
   margin-bottom: 6px;
+}
+
+/* Specific row layouts */
+#row-1 {
+  grid-template-columns: 1fr 1fr 1fr 2fr; /* arrows span 2 */
+}
+
+#row-9 {
+  grid-template-columns: 1fr 2fr 1fr 1fr; /* 0 button spans 2 */
 }
