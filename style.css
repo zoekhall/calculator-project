@@ -72,6 +72,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   margin-top: 10px;
+  position: relative;
 }
 
 .column {
@@ -85,28 +86,38 @@ body {
 }
 
 /* Arrow cluster styling */
+/* Arrow cluster spans columns 4-5, rows 1-2 */
 .arrow-cluster {
+  position: absolute;
+  top: 116px;
+  left: calc(60% - 2px);
+  width: calc(40% - 6px);
+  height: 60px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 2px;
-  margin-bottom: 4px;
+  z-index: 10;
 }
 
-.arrow-cluster .btn:first-child {
-  grid-column: 1 / span 2;
-  justify-self: center;
+.arrow-up {
+  grid-column: 2;
+  grid-row: 1;
 }
 
-.arrow-row {
-  grid-column: 1 / span 2;
-  display: flex;
-  justify-content: space-between;
+.arrow-left {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.arrow-cluster .btn:last-child {
-  grid-column: 1 / span 2;
-  justify-self: center;
+.arrow-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.arrow-down {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 /* Base button styling */
