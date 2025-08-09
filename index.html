@@ -10,27 +10,28 @@
   <div class = "calculator-wrapper">
     <div class="calculator">
       <div class="brand">TEXAS INSTRUMENTS TI-30X IIS</div>
-      <!-- ------------------------- TOP - display area -------------------------- -->
+      <!-- ------------------------- Display Section -------------------------- -->
       <div class="display-section">
         <input type="text" id="display" readonly value="0">
       </div>
       
-      <!-- --------------------- UPPER MIDDLE - mode/navigation buttons --------------------- -->
+      <!-- --------------------- Mode Buttons --------------------- -->
       <div class="row 1">
-        <button class="btn mode" data-action="2nd">2nd</button>
-        <button class="btn mode" data-action="drg">DRG</button>
-        <button class="btn mode" data-action="del">DEL</button>
-        <button class="btn arrows" data-action="arrows">▲▼◄►</button>
+        <button class="btn mode blue" data-action="2nd">2nd</button>
+        <button class="btn mode small" data-action="drg">DRG</button>
+        <button class="btn mode small" data-action="del">DEL</button>
+        <button class="btn arrows blue" data-action="arrows">▲▼◄►</button>
       </div>
       
-      <!-- --------------------- SCIENTIFIC --------------------- -->
-      <div class="scientific-section">
-        <!-- Row 1: LOG/trig functions/divide -->
-        <button class="btn scientific" data-action="log">LOG</button>
-        <button class="btn scientific" data-action="sin">SIN</button>
-        <button class="btn scientific" data-action="cos">COS</button>
+      <div class="row 2">
+        <button class="btn scientific small" data-action="log">LOG</button>
+        <button class="btn scientific small" data-action="prb">PRB</button>
+        <button class="btn scientific small" data-action="stat">• • •</button>
+        <button class="btn operator blue" data-action="divide">÷</button>
+
+        <button class="btn scientific small" data-action="sin">SIN</button>
+        <button class="btn scientific small" data-action="cos">COS</button>
         <button class="btn scientific" data-action="tan">TAN</button>
-        <button class="btn operator" data-action="divide">÷</button>
         
         <!-- Row 2: Powers/roots/multiply -->
         <button class="btn scientific" data-action="ln">LN</button>
