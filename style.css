@@ -1,3 +1,36 @@
+:root {
+  /* Spacing system */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 18px;
+  --spacing-xl: 25px;
+
+  /* Button dimensions */
+  --btn-height: 45px;
+  --btn-radius: 6px;
+  --btn-padding: 0 8px;
+
+  /* Colors */
+  --color-blue: #2f5b95;
+  --color-blue-hover: #3c6fb2;
+  --color-white: #e6e6e6;
+  --color-white-hover: #F0F0F0;
+  --color-dark: #1b1f2a;
+  --color-dark-hover: #444;
+  --color-border: #333;
+  --color-text-muted: #AAA;
+
+  /* Typography */
+  --font-family: Arial, Helvetica, sans-serif;
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-display: 32px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +57,10 @@ body {
   background: url('images/black_plastic_background.jpg'), linear-gradient(145deg, #222, #111);
   background-size: cover;
   width: 400px;
+  padding: var(--spacing-xl) var(--spacing-xl) 35px var(--spacing-xl);
   padding: 25px 25px 35px 25px;
   border-radius: 32px;
-  border: 3px solid #333;
+  border: 3px solid var(--color-border);
   min-height: 750px;
   position: relative;
   clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 97% 40%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 3% 40%, 0% 25%);
@@ -34,16 +68,16 @@ body {
 
 .display-section {
   background: linear-gradient(#f6f7f6, #e9e9e6);
-  padding: 15px 18px;
-  border-radius: 18px;
+  padding: 15px var(--spacing-lg);
+  border-radius: var(--spacing-lg);;
   border: 5px solid #f4f4f4;
-  margin-bottom: 18px;
+  margin-bottom:var(--spacing-lg);;
 }
 
 #display {
   background: linear-gradient(to bottom, #dfe8dc, #cfdac6);
-  font-size: 32px;
-  border-radius: 8px;
+  font-size: var(--font-size-display);
+  border-radius: var(--spacing-sm);
   padding: 0 20px;
   line-height: 60px;
   height: 60px;
@@ -52,25 +86,24 @@ body {
   border: 3px solid #d9d9d9;
   color: #0b0b0b;
   text-align: right;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
 
 /* Brand styling */
 .brand {
   text-align: center;
-  font-size: 14px;
+  font-size: var(--font-size-md);
   font-weight: bold;
-  color: #AAA;
-  margin-bottom: 6px;
-  font-family: Arial, sans-serif;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-family);
   letter-spacing: 0.5px;
 }
 
-/* NEW COLUMN-BASED LAYOUT */
 .button-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  gap: var(--spacing-md);
   margin-top: 15px;
   position: relative;
 }
@@ -78,14 +111,13 @@ body {
 .column {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 .spacer {
-  height: 45px;
+  height: var(--btn-height);
 }
 
-/* Arrow cluster styling */
 .arrow-cluster {
   position: absolute;
     top: 165px;
@@ -93,46 +125,34 @@ body {
     width: calc(30% - 4px);
     height: 85px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr 0.8fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3px;
     z-index: 10;
 }
 
-.arrow-up {
-  grid-column: 2;
-  grid-row: 1;
-}
+.arrow-up { grid-column: 2; grid-row: 1; }
 
-.arrow-left {
-  grid-column: 1;
-  grid-row: 2;
-}
+.arrow-left { grid-column: 1; grid-row: 2; justify-self: end;}
 
-.arrow-right {
-  grid-column: 3;
-  grid-row: 2;
-}
+.arrow-right { grid-column: 3; grid-row: 2; justify-self: start;}
 
-.arrow-down {
-  grid-column: 2;
-  grid-row: 3;
-}
+.arrow-down { grid-column: 2; grid-row: 3; }
 
 /* Base button styling */
 .btn {
-  height: 45px;
-  min-height: 45px;
-  font-size: 14px;
+  height: var(--btn-height);
+  min-height: var(--btn-height);
+  font-size: var(--font-size-md);
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: var(--btn-radius);
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
-  padding: 0 8px;
+  padding: var(--btn-padding);
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
   cursor: pointer;
   transition: all 0.1s ease;
   border: none;
@@ -150,35 +170,35 @@ body {
 
 /* Button colors and types */
 .blue {
-  background-color: #2f5b95;
-  color: white;
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .blue:hover {
-  background-color: #3c6fb2;
+  background-color: var(--color-blue-hover);
 }
 
 .white {
-  background-color: #e6e6e6;
+  background-color: var(--color-white);
   color: black;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-white-hover);
   font-weight: bold;
 }
 
 .white:hover {
-  background-color: #F0F0F0;
+  background-color: var(--color-white-hover);
 }
 
 .small,
 .black {
-  background-color: #1b1f2a;
-  color: white;
-  font-size: 10px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
 }
 
 .small:hover,
 .black:hover {
-  background-color: #444;
+  background-color: var(--color-dark-hover);
 }
 
 /* Button type specific styling */
