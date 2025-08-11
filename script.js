@@ -10,7 +10,35 @@ const calculator = document.querySelector('.calculator');
 
 //Helper functions
 function updateDisplay() {
-  display.value = currentNumber;
+	const resultDisplay = document.getElementById('display-result');
+	const operationDisplay = document.getElementById('display-operation');
+
+	resultDisplay.textContent = currentNumber;
+
+	// Show operation in top line
+	if (previousNumber && operator) {
+		operationDisplay.textContent = `${previousNumber} ${getOperatorSymbol(
+			operator
+		)}`;
+	} else {
+		operationDisplay.textContent = '';
+	}
+}
+
+// ADDED: Helper function for operator symbols
+function getOperatorSymbol(op) {
+	switch (op) {
+		case 'add':
+			return '+';
+		case 'subtract':
+			return '−';
+		case 'multiply':
+			return '×';
+		case 'divide':
+			return '÷';
+		default:
+			return '';
+	}
 }
 
 function calculate(strNum1, strNum2, operator) {
