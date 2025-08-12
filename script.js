@@ -1,31 +1,24 @@
-// state variables
 let currentNumber = '0';
 let previousNumber = null;
 let operator = null;
 let pendingInput = false;
 
-//Get DOM elements
-const display = document.getElementById('display');
+const displayResult = document.getElementById('display-result');
+const displayOperation = document.getElementById('display-operation');
 const calculator = document.querySelector('.calculator');
 
-//Helper functions
 function updateDisplay() {
-	const resultDisplay = document.getElementById('display-result');
-	const operationDisplay = document.getElementById('display-operation');
+	displayResult.textContent = currentNumber;
 
-	resultDisplay.textContent = currentNumber;
-
-	// Show operation in top line
 	if (previousNumber && operator) {
-		operationDisplay.textContent = `${previousNumber} ${getOperatorSymbol(
+		displayOperation.textContent = `${previousNumber} ${getOperatorSymbol(
 			operator
 		)}`;
 	} else {
-		operationDisplay.textContent = '';
+		displayOperation.textContent = '';
 	}
 }
 
-// ADDED: Helper function for operator symbols
 function getOperatorSymbol(op) {
 	switch (op) {
 		case 'add':
@@ -41,112 +34,82 @@ function getOperatorSymbol(op) {
 	}
 }
 
-function calculate(strNum1, strNum2, operator) {
-  let num1 = parseFloat(strNum1), num2 = parseFloat(strNum2);
+function calculate(num1, num2, op) {
+	const n1 = parseFloat(num1);
+	const n2 = parseFloat(num2);
 
-  switch (operator) {
-    case 'add':
-      return (num1 + num2).toString();
-    case 'subtract':
-      return (num1 - num2).toString();
-    case 'multiply':
-      return (num1 * num2).toString();
-    case 'divide':
-      if (num2 == 0) {
-        return (num1 == 0) ? 'indeterminate' : 'undefined';
-      } else {
-        return (num1 / num2).toString();
-      }
-  }
+	switch (op) {
+		case 'add':
+			return n1 + n2;
+		case 'subtract':
+			return n1 - n2;
+		case 'multiply':
+			return n1 * n2;
+		case 'divide':
+			return n2 !== 0 ? n1 / n2 : 'ERROR';
+	}
 }
 
-//Button 'click' event listener
+function handleNumbers(num) {
+	if (pendingInput || currentNumber === '0') {
+		currentNumber = num;
+		pendingInput = false;
+	} else {
+		currentNumber += num;
+	}
+	updateDisplay();
+}
+
+function handleActions(action) {
+	switch (action) {
+		case 'clear':
+			currentNumber = '0';
+			previousNumber = null;
+			operator = null;
+			pendingInput = false;
+			break;
+
+		case 'decimal':
+			if (!currentNumber.includes('.')) {
+				currentNumber += '.';
+			}
+			break;
+
+		case 'equals':
+			if (operator && previousNumber !== null) {
+				const result = calculate(previousNumber, currentNumber, operator);
+				currentNumber = result.toString();
+			}
+			operator = null;
+			previousNumber = null;
+			pendingInput = true;
+			break;
+
+		case 'add':
+		case 'subtract':
+		case 'multiply':
+		case 'divide':
+			if (operator && previousNumber !== null && !pendingInput) {
+				const result = calculate(previousNumber, currentNumber, operator);
+				currentNumber = result.toString();
+			}
+			previousNumber = currentNumber;
+			operator = action;
+			pendingInput = true;
+			break;
+	}
+	updateDisplay();
+}
+
 calculator.addEventListener('click', function (event) {
-  const button = event.target;
-  if(button.matches('button')){
-    if (button.dataset.number) {
+	const button = event.target;
+	if (button.matches('button')) {
+		if (button.dataset.number) {
 			handleNumbers(button.dataset.number);
 		} else if (button.dataset.action) {
 			handleActions(button.dataset.action);
 		}
-  }
-    
+	}
 });
 
-// handle number buttons
-function handleNumbers(num) {
-  if (pendingInput || currentNumber === '0') {
-    currentNumber = num;
-    pendingInput = false;
-  } else {
-    currentNumber += num; 
-  }
-  updateDisplay()
-}
-
-
-
-function handleActions(action) {
-  switch (action) {
-    case 'clear': //reset clear
-      currentNumber = '0';
-      previousNumber = null;
-      operator = null;
-      pendingInput = false;
-      break;
-    case 'decimal': //add decimal if one not already used
-      if (!currentNumber.includes('.')) {
-        currentNumber += '.';
-      }
-      break;
-    case 'equals':
-      if (operator && previousNumber !== null) { 
-        currentNumber = calculate(previousNumber, currentNumber, operator)
-      }
-      operator = null;
-			previousNumber = null;
-			pendingInput = true;
-      break;
-    case 'add':
-    case 'subtract':
-    case 'multiply':
-    case 'divide':
-      if (operator !== null && previousNumber !== null && !pendingInput) {
-        currentNumber = calculate(previousNumber, currentNumber, operator)
-      }
-      previousNumber = currentNumber;
-      operator = action;
-      pendingInput = true;
-      break;
-    case 'square':
-  }
-  updateDisplay();
-}
-
-
-
-
-/* 
-ON button click - 
-  if click data-number
-    if currentNumber = 0 or data-number = 0, add to current number
-    if currentNumber is a number > 0, append to current number
-  if click data-action
-    if action = decimal
-      if decimal already exists in currentNumber - don't add
-      else append decimal to current number 
-    if action = 'enter'
-      do the math
-      display the result
-    if action is an operator 
-      store current number as previous number
-      store which operation they want 
-      clear display for next number input
-*/
-  
-
-//how to handle action 
-  //operator
-  //equals
-  //clear
-  
+updateDisplay();
