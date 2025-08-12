@@ -10,7 +10,6 @@
   --font: Arial, Helvetica, sans-serif;
   --btn-height: 45px;
   --btn-radius: 8px;
-  /* More rounded like TI-30X */
   --space-sm: 8px;
   --space-md: 12px;
   --space-lg: 18px;
@@ -49,7 +48,6 @@ body {
   clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 97% 40%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 3% 40%, 0% 25%);
 }
 
-/* More authentic display styling */
 .display-section {
   background: linear-gradient(145deg, #f8f8f8, #e8e8e8);
   padding: 12px 15px;
@@ -67,10 +65,8 @@ body {
   margin-bottom: 8px;
   letter-spacing: 1px;
   font-family: 'Courier New', monospace;
-  /* More calculator-like font */
 }
 
-/* More realistic TI display */
 #display {
   background: linear-gradient(145deg, #c8d4c0, #b8c4b0);
   border-radius: 6px;
@@ -123,6 +119,25 @@ body {
   height: var(--btn-height);
 }
 
+/* Button with label container */
+.btn-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Labels above buttons */
+.btn-label {
+  font-size: 7px;
+  color: #ccc;
+  text-align: center;
+  height: 10px;
+  line-height: 10px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 .arrow-cluster {
   position: absolute;
   top: 165px;
@@ -158,7 +173,6 @@ body {
   justify-self: start;
 }
 
-/* More authentic button styling */
 .btn {
   height: var(--btn-height);
   min-height: var(--btn-height);
@@ -166,10 +180,9 @@ body {
   font-weight: bold;
   border-radius: var(--btn-radius);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4px 6px;
+  padding: 0 var(--space-sm);
   font-family: var(--font);
   cursor: pointer;
   transition: all 0.1s ease;
@@ -177,7 +190,6 @@ body {
   background: var(--dark);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  position: relative;
 }
 
 .btn:hover {
@@ -188,21 +200,6 @@ body {
 .btn:active {
   transform: translateY(0);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Button text styling for authentic look */
-.btn-secondary {
-  font-size: 7px;
-  opacity: 0.8;
-  line-height: 1;
-  margin-bottom: 2px;
-  text-align: center;
-}
-
-.btn-main {
-  font-size: 10px;
-  line-height: 1;
-  text-align: center;
 }
 
 /* Button color variants */
@@ -233,11 +230,11 @@ body {
 }
 
 /* Button type specific styling */
-.mode .btn-main {
+.mode {
   font-size: 10px;
 }
 
-.scientific .btn-main {
+.scientific {
   font-size: 9px;
 }
 
@@ -267,14 +264,9 @@ body {
   width: 42px;
   height: 25px;
   min-height: 25px;
+  border-radius: 20px;
 }
 
-/* Make number buttons more oval/rounded like TI-30X */
 .number {
   border-radius: 12px;
-}
-
-/* Make arrows more compact */
-.arrow {
-  border-radius: 20px;
 }
