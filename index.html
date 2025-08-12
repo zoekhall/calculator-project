@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+  <title>TI-30X IIS Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="calculator-wrapper">
     <div class="calculator">
-
       <div class="display-section">
         <div class="brand">TEXAS INSTRUMENTS TI-30X IIS</div>
-        <div class="display-top" id="display-operation"></div>
-        <div class="display-main" id="display-result">0</div>
+        <div id="display">
+          <div class="display-top" id="display-operation"></div>
+          <div class="display-main" id="display-result">0</div>
+        </div>
       </div>
 
       <div class="button-container">
-        <!-- Column 1: Scientific Functions -->
         <div class="column">
           <button class="btn mode blue" data-action="2nd">2nd</button>
           <button class="btn scientific" data-action="log">LOG</button>
@@ -32,7 +32,6 @@
           <button class="btn scientific" data-action="on">ON</button>
         </div>
 
-        <!-- Column 2: Functions & Numbers -->
         <div class="column">
           <button class="btn mode" data-action="drg">DRG</button>
           <button class="btn scientific" data-action="prb">PRB</button>
@@ -45,7 +44,6 @@
           <button class="btn number white" data-number="0">0</button>
         </div>
 
-        <!-- Column 3: More Functions & Numbers -->
         <div class="column">
           <button class="btn mode" data-action="del">DEL</button>
           <button class="btn scientific" data-action="stat">•••</button>
@@ -58,7 +56,6 @@
           <button class="btn decimal white" data-action="decimal">.</button>
         </div>
 
-        <!-- Column 4: Functions & Numbers -->
         <div class="column">
           <div class="spacer"></div>
           <div class="spacer"></div>
@@ -71,7 +68,6 @@
           <button class="btn number white" data-action="negative">(-)</button>
         </div>
 
-        <!-- Column 5: Operations -->
         <div class="column">
           <div class="spacer"></div>
           <div class="spacer"></div>
