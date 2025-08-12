@@ -9,7 +9,8 @@
   --text-muted: #aaa;
   --font: Arial, Helvetica, sans-serif;
   --btn-height: 45px;
-  --btn-radius: 6px;
+  --btn-radius: 8px;
+  /* More rounded like TI-30X */
   --space-sm: 8px;
   --space-md: 12px;
   --space-lg: 18px;
@@ -37,7 +38,7 @@ body {
 }
 
 .calculator {
-  background: url('images/black_plastic_background.jpg'), linear-gradient(145deg, #222, #111);
+  background: url('images/black_plastic_background.jpg'), linear-gradient(145deg, #2a2a2a, #1a1a1a);
   background-size: cover;
   width: 400px;
   padding: var(--space-xl) var(--space-xl) 35px;
@@ -48,52 +49,60 @@ body {
   clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 97% 40%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 3% 40%, 0% 25%);
 }
 
+/* More authentic display styling */
 .display-section {
-  background: linear-gradient(#f6f7f6, #e9e9e6);
-  padding: 15px var(--space-lg);
-  border-radius: var(--space-lg);
-  border: 5px solid #f4f4f4;
+  background: linear-gradient(145deg, #f8f8f8, #e8e8e8);
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: 4px solid #ddd;
   margin-bottom: var(--space-lg);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .brand {
   text-align: center;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
+  color: #666;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
+  /* More calculator-like font */
 }
 
+/* More realistic TI display */
 #display {
-  background: linear-gradient(to bottom, #dfe8dc, #cfdac6);
-  border-radius: var(--space-sm);
-  padding: 4px 20px;
-  height: 60px;
+  background: linear-gradient(145deg, #c8d4c0, #b8c4b0);
+  border-radius: 6px;
+  padding: 6px 15px;
+  height: 55px;
   width: 100%;
-  border: 3px solid #d9d9d9;
-  color: #0b0b0b;
+  border: 2px solid #a0a8a0;
+  color: #000;
   text-align: right;
-  font-family: var(--font);
+  font-family: 'Courier New', monospace;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .display-top {
-  font-size: 12px;
-  opacity: 0.7;
-  min-height: 18px;
+  font-size: 10px;
+  opacity: 0.8;
+  min-height: 12px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 .display-main {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .button-container {
@@ -149,75 +158,108 @@ body {
   justify-self: start;
 }
 
+/* More authentic button styling */
 .btn {
   height: var(--btn-height);
   min-height: var(--btn-height);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   border-radius: var(--btn-radius);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 var(--space-sm);
+  padding: 4px 6px;
   font-family: var(--font);
   cursor: pointer;
   transition: all 0.1s ease;
   border: none;
   background: var(--dark);
   color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .btn:active {
   transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* Button text styling for authentic look */
+.btn-secondary {
+  font-size: 7px;
+  opacity: 0.8;
+  line-height: 1;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.btn-main {
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Button color variants */
 .blue {
-  background: var(--blue);
+  background: linear-gradient(145deg, var(--blue), #1e4380);
 }
 
 .blue:hover {
-  background: var(--blue-hover);
+  background: linear-gradient(145deg, var(--blue-hover), #2650a0);
 }
 
 .white {
-  background: var(--white);
+  background: linear-gradient(145deg, var(--white), #d0d0d0);
   color: black;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
 }
 
 .white:hover {
-  background: var(--white-hover);
+  background: linear-gradient(145deg, var(--white-hover), #e0e0e0);
+}
+
+.btn:not(.blue):not(.white) {
+  background: linear-gradient(145deg, var(--dark), #0f1419);
 }
 
 .btn:not(.blue):not(.white):hover {
-  background: var(--dark-hover);
+  background: linear-gradient(145deg, var(--dark-hover), #2a2a2a);
 }
 
-.mode {
-  font-size: 12px;
-}
-
-.scientific,
-.clear {
+/* Button type specific styling */
+.mode .btn-main {
   font-size: 10px;
 }
 
-.operator,
+.scientific .btn-main {
+  font-size: 9px;
+}
+
+.clear {
+  font-size: 9px;
+}
+
+.operator {
+  font-size: 16px;
+}
+
 .number {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .equals {
-  font-size: 12px;
+  font-size: 9px;
 }
 
 .decimal {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .arrow {
@@ -225,4 +267,14 @@ body {
   width: 42px;
   height: 25px;
   min-height: 25px;
+}
+
+/* Make number buttons more oval/rounded like TI-30X */
+.number {
+  border-radius: 12px;
+}
+
+/* Make arrows more compact */
+.arrow {
+  border-radius: 20px;
 }
