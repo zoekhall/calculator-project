@@ -127,7 +127,9 @@ body {
 .column {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 8px; 
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .spacer {
@@ -268,23 +270,14 @@ body {
 
 .btn[data-action="2nd"] {
   background: linear-gradient(145deg, #5a9bd4, #4a8bc4);
-  /* Light blue */
-  width: calc(100% + 8px);
-  /* Slightly wider */
-  height: calc(var(--btn-height) + 4px);
-  /* Slightly taller */
 }
 
 
-.btn.scientific {
+.btn.scientific, .btn.mode, .btn.clear {
   height: 32px;
-  /* Make them thinner */
   min-height: 32px;
-  /* Ensure consistency */
   min-width: 100%;
-  /* Force same width */
   font-size: 8px;
-  /* Smaller text for thin buttons */
 }
 
 .btn[data-action="on"] {
