@@ -69,7 +69,7 @@ body {
   border-radius: 18px;
   position: relative;
   transform: scale(1.1);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 97% 40%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 3% 40%, 0% 25%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 97% 50%, 100% 65%, 100% 100%, 0% 100%, 0% 65%, 3% 50%, 0% 35%);
 }
 
 /* ----------------------------- DISPLAY SECTION ---------------------------- */
@@ -276,8 +276,8 @@ body {
 /* ------------------------------ ARROW CLUSTER ----------------------------- */
 .arrow-cluster {
   position: absolute;
-  top: 153px;
-  left: calc(62% - 6px);
+  top: calc(26% - 5px);
+  left: calc(66% - 6px);
   width: 82px;
   height: 63px;
   display: grid;
@@ -331,31 +331,31 @@ body {
 
 .btn.arrow {
   font-size: 10px;
-  width: 35px;
-  min-height: 18px;
+  width: 40px;
+  min-height: 22px;
   padding: 2px 5px;
 }
 
 .arrow[data-action="up"] {
   border-radius: 55px;
-  height: 18px;
+  height: 22px;
   align-items: flex-start;
 }
 
 .arrow[data-action="down"] {
   border-radius: 55px;
-  height: 18px;
+  height: 22px;
   align-items: flex-end;
 }
 
 .arrow[data-action="left"] {
   border-radius: 25px 55px 55px 25px;
-  height: 20px;
+  height: 24px;
   justify-content: flex-start;
 }
 
 .arrow[data-action="right"] {
   border-radius: 55px 25px 25px 55px;
-  height: 20px;
+  height: 24px;
   justify-content: flex-end;
 }
