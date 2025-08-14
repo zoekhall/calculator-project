@@ -25,7 +25,7 @@
   /* Layout */
   --btn-height: 38px;
   --btn-height-blue: calc(var(--btn-height) + 2px);
-  --btn-height-white: calc(var(--btn-height) + 4px);
+  --btn-height-white: calc(var(--btn-height) + 3px);
   --btn-height-black: 32px;
   --btn-height-on: 42px;
   --spacer-height: calc(10px + 32px + 2px);
@@ -154,7 +154,7 @@ body {
 
 .btn-label {
   font-size: 7px;
-  color: var(--gray-light);
+  color: var(--color-blue-light);
   text-align: center;
   height: 10px;
   line-height: 10px;
@@ -202,6 +202,7 @@ body {
   border-radius: 4px;
   height: var(--btn-height-blue);
   font-weight: 900;
+  margin-bottom: 20%;
 }
 
 .btn.blue:hover {
@@ -215,9 +216,10 @@ body {
   border: 1px solid var(--gray-medium);
   border-radius: var(--border-radius-white);
   height: var(--btn-height-white);
-  width: calc(100% + 6px);
+  width: calc(80% + 6px);
   font-size: 18px;
   font-weight: 900;
+  margin-top: 15%;
 }
 
 .btn.white:hover {
@@ -267,8 +269,8 @@ body {
 }
 
 .btn[data-action="on"] {
-  height: var(--btn-height-on);
-  min-height: var(--btn-height-on);
+  height: calc(var(--btn-height));
+  min-height: calc(var(--btn-height));
 }
 
 /* ------------------------------ ARROW CLUSTER ----------------------------- */

@@ -23,7 +23,7 @@
         <div class="column">
           <div class="btn-with-label">
             <div class="btn-label">10^x</div>
-            <button class="btn mode blue" data-action="2nd">2nd</button>
+            <button class="btn mode" data-action="2nd">2nd</button>
           </div>
           <div class="btn-with-label">
             <div class="btn-label">e^x</div>
@@ -45,7 +45,10 @@
             <div class="btn-label">∛x</div>
             <button class="btn scientific" data-action="sqrt">√</button>
           </div>
-          <button class="btn scientific" data-action="memvar">MEMVAR</button>
+          <div class="btn-with-label">
+            <div class="btn-label">CLRVAR</div>
+            <button class="btn scientific" data-action="memvar">MEMVAR</button>
+          </div>
           <div class="btn-with-label">
             <div class="btn-label">RCL</div>
             <button class="btn scientific" data-action="sto">STO</button>
@@ -137,8 +140,11 @@
           <div class="btn-with-label">
             <div class="btn-label"></div> <!-- Empty label -->
             <button class="btn clear" data-action="clear">CLEAR</button>
-          </div>          
-          <button class="btn operator blue" data-action="divide">÷</button>
+          </div>     
+          <div class="btn-with-label">
+            <div class="btn-label">K</div>
+            <button class="btn operator blue" data-action="divide">÷</button>
+          </div>
           <button class="btn operator blue" data-action="multiply">×</button>
           <button class="btn operator blue" data-action="subtract">−</button>
           <button class="btn operator blue" data-action="add">+</button>
