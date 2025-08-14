@@ -54,13 +54,12 @@ body {
 
 .calculator {
   background: url('images/black_plastic_background.jpg') center/cover;
-  width: 380px;
-  height: 500;
+  width: 340px;
   padding: 20px 18px 25px;
   border: 2px solid #333;
   border-radius: 18px;
-  min-height: 750px;
   position: relative;
+  transform: scale(1.1);
   clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 97% 40%, 100% 55%, 100% 100%, 0% 100%, 0% 55%, 3% 40%, 0% 25%);
 }
 
@@ -265,4 +264,31 @@ body {
 .number {
   border-radius: 16px;
   /* Override the previous 12px */
+}
+
+.btn[data-action="2nd"] {
+  background: linear-gradient(145deg, #5a9bd4, #4a8bc4);
+  /* Light blue */
+  width: calc(100% + 8px);
+  /* Slightly wider */
+  height: calc(var(--btn-height) + 4px);
+  /* Slightly taller */
+}
+
+
+.btn.scientific {
+  height: 32px;
+  /* Make them thinner */
+  min-height: 32px;
+  /* Ensure consistency */
+  min-width: 100%;
+  /* Force same width */
+  font-size: 8px;
+  /* Smaller text for thin buttons */
+}
+
+.btn[data-action="on"] {
+  height: 42px;
+  /* Taller than other black buttons */
+  min-height: 42px;
 }
