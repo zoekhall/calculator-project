@@ -241,11 +241,11 @@ body {
 .decimal { font-size: 18px; }
 
 .arrow {
-  font-size: 12px;
-  width: 35px;
-  height: 26px;
-  min-height: 26px;
-  border-radius: 16px;
+  font-size: 11px;
+  width: 30px;
+  height: 24px;
+  min-height: 24px;
+  border-radius: 15px;
 }
 
 .number {
