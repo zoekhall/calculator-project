@@ -1,3 +1,17 @@
+// State Management
+const calculatorState =
+	{
+		mode: 'normal', // normal, error
+		angleMode: 'deg', // deg, rad, grad
+		displayMode: 'float', // float, sci, eng
+		expression: '', // current expression
+		result: '', // calculated result
+		memory: { A: 0, B: 0, C: 0, D: 0, E: 0, ANS: 0 },
+		history: [], // calculation history
+		cursor: 0, // cursor position
+		error: null, // current error state
+	}
+
 let currentNumber = '0';
 let previousNumber = null;
 let operator = null;
