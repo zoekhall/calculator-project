@@ -22,5 +22,10 @@ class calculatorState {
 		} else {
 			return { top: this.expression || '', bottom: this.result || '0' };
 		}
-	}
+  }
+  
+  addDigit(digit) {
+    this.expression += digit; //add digit to expression string
+    this.cursor = this.expression.length; 
+  }
 }
