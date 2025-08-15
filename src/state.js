@@ -25,7 +25,14 @@ class calculatorState {
   }
   
   addDigit(digit) {
+    if (this.error) {
+			this.error = null;
+		}
     this.expression += digit; //add digit to expression string
     this.cursor = this.expression.length; 
+  }
+
+  addDecimal() {
+
   }
 }
