@@ -6,4 +6,12 @@ class calculatorState {
     this.error = null; // current error state
     this.cursor = 0; // cursor position
   }
+
+  //determine what should be displayed
+  getDisplayState() {
+    if (this.error) return { top: '', bottom: this.error };
+    if (this.showResult) return { top: this.expression, bottom: this.result };
+    return { top: this.getTopLineExp(), bottom: this.getCurrentEntry() || 0 };
+    
+  }
 }
