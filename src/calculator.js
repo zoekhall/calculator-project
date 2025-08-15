@@ -14,4 +14,9 @@ class calculatorState {
     return { top: this.getTopLineExp(), bottom: this.getCurrentEntry() || 0 };
     
   }
+
+  getTopLineExp() {
+    if (!this.result) return ''
+    if (/[+\-×÷]$/.test(this.expression)) return this.expression;
+  }
 }
