@@ -64,6 +64,30 @@ class CalculatorState {
     this.cursor = this.expression.length;
   }
 
+  calculate() {
+    if (this.error || this.expression === '') { //nothing to calculate
+      return; 
+    }
+
+    const mathExp = this.expression.replace(/×/g, '*').replace(/÷/g, '/');
+    let result; 
+
+    try {
+      result = eval(mathExp); //assign result to result of mathExp
+    } catch (error) {
+      this.error = 'SYNTAX ERROR';
+      return;
+    }
+
+    if (!isFinite(result)) { //if the result is note finite  
+      this.error = 'MATH ERROR';
+      return;
+    }
+
+    this.result = result.toString() //revert result back to a string
+    this.memory.ANS = result //assign result to memory
+  }
+
   clear() {
     this.expression = '';
     this.result = '';
