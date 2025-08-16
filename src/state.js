@@ -57,3 +57,5 @@ class calculatorState {
 		this.historyIndex = -1;
   }
 }
+
+window.calculatorState = new CalculatorState();
