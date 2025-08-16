@@ -26,7 +26,8 @@ class calculatorState {
   }
 
   getCurrentNumber() {
-    
+    const lastOpIndex = Math.max(...(this.operators.map(op => this.expression.lastIndexOf(op))))
+    return this.expression.substring(lastOpIndex + 1)
   }
   
   addDigit(digit) {
