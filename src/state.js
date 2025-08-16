@@ -3,7 +3,8 @@ class calculatorState {
 		this.expression = ''; // current expression/input
 		this.result = ''; // calculated result
 		this.error = null; // current error state
-		this.cursor = 0; // cursor position
+    this.cursor = 0; // cursor position
+    this.operators = ['+', '-', 'x', '/'];
 
 		// TI-30X IIS specific features
 		this.memory = { A: 0, B: 0, C: 0, D: 0, E: 0, ANS: 0 }; // 5 memory variables + ANS
@@ -23,6 +24,10 @@ class calculatorState {
 			return { top: this.expression || '', bottom: this.result || '0' };
 		}
   }
+
+  getCurrentNumber() {
+    
+  }
   
   addDigit(digit) {
     if (this.error) {
@@ -30,9 +35,5 @@ class calculatorState {
 		}
     this.expression += digit; //add digit to expression string
     this.cursor = this.expression.length; 
-  }
-
-  addDecimal() {
-
   }
 }
