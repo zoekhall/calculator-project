@@ -54,9 +54,10 @@ class CalculatorState {
 			this.error = null;
     }
 
-    if (this.expression === '') { //if exp is empty, start with previous result (ANS)
-			this.expression = this.memoryANS + op;
-		} else if (this.operators.includes(this.expression.slice(-1))) {	//if the last value in expression is an operator, replace it
+    if (this.expression === '') {
+			this.expression = this.memory.ANS + op; //if exp is empty, start with previous result (ANS)
+		} else if (this.operators.includes(this.expression.slice(-1))) {	
+      this.expression = this.expression.slice(0, -1) + op //replace last op with new op 
     } else {
       this.expression += op; 
     }
