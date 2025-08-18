@@ -9,4 +9,6 @@ class DisplayManager {
     this.topDisplay.textContent = displayState.top;
     this.bottomDisplay.textContent = displayState.bottom;
   }
+
+  
 }
