@@ -27,4 +27,24 @@ class Calculator {
     this.state.addNum(num);
     this.display.update();
   }
+
+  handleAction(action) {
+    switch (action) {
+      case 'clear':
+        this.state.clear();
+        break;
+      case 'add':
+        this.state.addOperator('+');
+        break;
+      case 'subtract':
+        this.state.addOperator('-');
+        break;
+      case 'divide':
+        this.state.addOperator('÷');
+        break;
+      case 'multiply':
+        this.state.addOperator('×');
+    }
+    this.display.update();
+  }
 }
