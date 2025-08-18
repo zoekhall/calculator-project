@@ -6,4 +6,20 @@ class Calculator {
     this.setupEventListeners()
     this.display.update(); 
   }
+
+  setupEventListeners() {
+    document.querySelector('.calculator').addEventListener('click', (event) => {
+      const button = event.target; 
+      if (!button.matches('button')) return; //only handle button clicks
+
+      const number = button.dataset.number; 
+      const action = button.dataset.action; 
+
+      if (number !== undefined) {
+        this.handleNumber(number);
+      } else if (action) {
+        this.handleAction(action);
+      }
+    })
+  }
 }
