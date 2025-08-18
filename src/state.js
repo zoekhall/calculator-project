@@ -30,11 +30,11 @@ class CalculatorState {
     return this.expression.substring(lastOpIndex + 1)
   }
   
-  addDigit(digit) {
+  addNum(num) {
     if (this.error) {
 			this.error = null;
 		}
-    this.expression += digit; //add digit to expression string
+    this.expression += num; //add num to expression string
     this.cursor = this.expression.length; 
   }
 

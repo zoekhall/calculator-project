@@ -22,4 +22,9 @@ class Calculator {
       }
     })
   }
+
+  handleNumber(num) {
+    this.state.addNum(num);
+    this.display.update();
+  }
 }
