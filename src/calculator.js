@@ -57,3 +57,7 @@ class Calculator {
     this.display.update();
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	window.calculator = new Calculator();
+});
