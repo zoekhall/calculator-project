@@ -33,6 +33,9 @@ class Calculator {
       case 'clear':
         this.state.clear();
         break;
+      case 'decimal':
+        this.state.addDecimal();
+        break;
       case 'add':
         this.state.addOperator('+');
         break;
@@ -44,6 +47,12 @@ class Calculator {
         break;
       case 'multiply':
         this.state.addOperator('×');
+        break;
+      case 'equals':
+        this.state.calculate();
+        break;
+      default: 
+        console.log('Action not implemented')
     }
     this.display.update();
   }
