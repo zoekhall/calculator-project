@@ -12,3 +12,5 @@ class DisplayManager {
 
   
 }
+
+window.displayManager = new DisplayManager()
