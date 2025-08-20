@@ -33,8 +33,12 @@ class CalculatorState {
   addNum(num) {
     if (this.error) {
 			this.error = null;
-		}
-    this.expression += num; //add num to expression string
+    }else if (this.result && this.expression) {
+      this.expression = num; 
+      this.result = '';
+    } else {
+      this.expression += num; //add num to expression string
+    }
     this.cursor = this.expression.length; 
   }
 
