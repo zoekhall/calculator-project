@@ -18,9 +18,11 @@ class CalculatorState {
 
 	//determine what should be displayed
 	getDisplayState() {
-		if (this.error) {
-			return { top: '', bottom: this.error };
-		} else {
+    if (this.error) {
+      return { top: '', bottom: this.error };
+    } else if (this.expression && this.result) {
+      return { top: this.expression, bottom: this.result }
+    }else {
 			return { top: this.expression || '', bottom: this.result || '0' };
 		}
   }
