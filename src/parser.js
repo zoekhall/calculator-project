@@ -31,10 +31,18 @@ class ExpressionParser {
     let current = [...tokens];
 
     const calculateResult = (left, op, right) => {
-      
-    }
+      switch (op) {
+        case '×': return left * right;
+        case '÷': return right !== 0 ? left / right : Infinity;
+        case '+': return left + right;
+        case '-': return left - right;
+        default:
+          console.warn(`Unknown operator: ${op}`);
+          return NaN;
+      }
+    };
     
-    const applyOperators = (operators) => {
+    const applyOperation = (operators) => {
       for (let i = 0; i < current.length; i += 2) {
         if (operators.includes(current[i])) {
           const left = parseFloat(current[i - 1]);
@@ -44,8 +52,18 @@ class ExpressionParser {
           const result = calculateResult(left, op, right);
           current.splice(i - 1, 3, result.toString());
         }
-      } 
+      }
+    };
+
+    while (current.includes('×') || current.includes('÷')) {
+			applyOperation(['×', '÷']);
+		}
+
+		while (current.includes('+') || current.includes('-')) {
+			applyOperation(['+', '-']);
     }
+    
+    return parseFloat(current[0])
   }
 }
 
