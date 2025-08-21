@@ -25,16 +25,28 @@ class ExpressionParser {
     return tokens;
   }
 
-  // evaluate(tokens) {
-  //   if (tokens.length === 1) return parseFloat(tokens[0]);
-  
-  //   let current = [...tokens];
+  evaluate(tokens) {
+    if (tokens.length <= 1) return parseFloat(tokens[0] || 0);
 
-  //   while (current.includes('×') || current.includes('÷')) {
-  //     for (let i = 0; i < cu)
-  //   }
-  
-  // }
+    let current = [...tokens];
+
+    const calculateResult = (left, op, right) => {
+      
+    }
+    
+    const applyOperators = (operators) => {
+      for (let i = 0; i < current.length; i += 2) {
+        if (operators.includes(current[i])) {
+          const left = parseFloat(current[i - 1]);
+          const right = parseFloat(current[i + 1]);
+          const op = current[i];
+
+          const result = calculateResult(left, op, right);
+          current.splice(i - 1, 3, result.toString());
+        }
+      } 
+    }
+  }
 }
 
 window.expressionParser = new ExpressionParser();
