@@ -51,6 +51,7 @@ class ExpressionParser {
 
           const result = calculateResult(left, op, right);
           current.splice(i - 1, 3, result.toString());
+          break;
         }
       }
     };

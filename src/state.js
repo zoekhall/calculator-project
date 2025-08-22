@@ -75,7 +75,6 @@ class CalculatorState {
 
 	calculate() {
 		if (this.error || this.expression === '') {
-			//nothing to calculate
 			return;
 		}
 
@@ -83,21 +82,23 @@ class CalculatorState {
 		let result;
 
 		try {
-			result = eval(mathExp); //assign result to result of mathExp
-		} catch (error) {
-			this.error = 'SYNTAX ERROR';
-			return;
-		}
-
-		if (!isFinite(result)) {
-			//if the result is note finite
-			this.error = 'MATH ERROR';
-			return;
-		}
-
-		this.result = result.toString(); //revert result back to a string
-		this.memory.ANS = result; //assign result to memory
-	}
+			const tokens = window.expressionParser.tokenize(this.expression);
+			const result = window.expressionParser.evaluate(tokens);
+    
+      
+      if (!isFinite(result)) {
+        this.error = 'MATH ERROR';
+        return;
+      }
+      
+      this.result = result.toString(); //revert result back to a string
+      this.memory.ANS = result; //assign result to memory
+    
+    } catch (error) {
+      this.error = 'SYNTAX ERROR';
+      return;
+    }
+  }
 
 	clear() {
 		this.expression = '';
