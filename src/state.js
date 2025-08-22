@@ -4,7 +4,8 @@ class CalculatorState {
 		this.result = ''; // calculated result
 		this.error = null; // current error state
 		this.cursor = 0; // cursor position
-		this.operators = ['+', '-', '×', '÷'];
+    this.operators = ['+', '-', '×', '÷'];
+    this.justCalculated = false;
 
 		// TI-30X IIS specific features
 		this.memory = { A: 0, B: 0, C: 0, D: 0, E: 0, ANS: 0 }; // 5 memory variables + ANS
@@ -37,9 +38,10 @@ class CalculatorState {
 	addNum(num) {
 		if (this.error) {
 			this.error = null;
-		} else if (this.result && this.expression) {
+		} else if (this.justCalculated) {
 			this.expression = num;
-			this.result = '';
+      this.result = '';
+      this.justCalculated = false; 
 		} else {
 			this.expression += num; //add num to expression string
 		}
@@ -62,8 +64,11 @@ class CalculatorState {
 			this.error = null;
 		}
 
-		if (this.expression === '') {
-			this.expression = this.memory.ANS + op; //if exp is empty, start with previous result (ANS)
+    if (this.justCalculated) {
+      this.expression = this.result + op; //if exp is empty, start with previous result (ANS)
+      this.justCalculated = false;
+    } else if (this.expression === '') {
+      this.expression = this.memory.ANS + op;
 		} else if (this.operators.includes(this.expression.slice(-1))) {
 			this.expression = this.expression.slice(0, -1) + op; //replace last op with new op
 		} else {
@@ -77,26 +82,22 @@ class CalculatorState {
 		if (this.error || this.expression === '') {
 			return;
 		}
-
-		const mathExp = this.expression.replace(/×/g, '*').replace(/÷/g, '/');
-		let result;
-
+		
 		try {
 			const tokens = window.expressionParser.tokenize(this.expression);
 			const result = window.expressionParser.evaluate(tokens);
-    
       
       if (!isFinite(result)) {
         this.error = 'MATH ERROR';
         return;
       }
-      
-      this.result = result.toString(); //revert result back to a string
-      this.memory.ANS = result; //assign result to memory
     
+      this.result = result.toString();
+      this.memory.ANS = result; 
+      this.justCalculated = true; 
+
     } catch (error) {
       this.error = 'SYNTAX ERROR';
-      return;
     }
   }
 
