@@ -43,7 +43,7 @@ class ExpressionParser {
     };
     
     const applyOperation = (operators) => {
-      for (let i = 0; i < current.length; i += 2) {
+      for (let i = 1; i < current.length; i += 2) {
         if (operators.includes(current[i])) {
           const left = parseFloat(current[i - 1]);
           const right = parseFloat(current[i + 1]);
