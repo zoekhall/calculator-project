@@ -51,8 +51,11 @@ class Calculator {
       case 'equals':
         this.state.calculate();
         break;
-      default: 
-        console.log('Action not implemented')
+      case 'pi':
+        this.state.addConstant('π');
+        break;
+      default:
+        console.log('Action not implemented', action);
     }
     this.display.update();
   }
