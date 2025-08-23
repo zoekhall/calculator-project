@@ -125,7 +125,12 @@ class CalculatorState {
 		this.historyIndex = -1;
   }
   
-/* ----------------------------- PRIVATE HELPERS ---------------------------- */
+  /* ----------------------------- PRIVATE HELPERS ---------------------------- */
+  _clearError() {
+    if (this.error) {
+      this.error = null;
+    }
+  }
 }
 
 window.calculatorState = new CalculatorState();
