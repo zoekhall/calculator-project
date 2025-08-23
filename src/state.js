@@ -16,7 +16,7 @@ class CalculatorState {
 		this.constantOperation = ''; // Stored constant operation
 	}
 
-	/* ------------------------- Display & State Queries ------------------------ */
+/* ------------------------- DISPLAY/STATE QUERIES ------------------------ */
 	getDisplayState() {
 		if (this.error) {
 			return { top: '', bottom: this.error };
@@ -34,6 +34,7 @@ class CalculatorState {
 		return this.expression.substring(lastOpIndex + 1);
 	}
 
+/* ------------------------------ INPUT METHODS ----------------------------- */
 	addNum(num) {
 		if (this.error) {
 			this.error = null;
@@ -93,6 +94,7 @@ class CalculatorState {
 		this.cursor = this.expression.length;
 	}
 
+/* ------------------------------- CALCULATING ------------------------------ */
 	calculate() {
 		if (this.error || this.expression === '') {
 			return;
@@ -121,7 +123,9 @@ class CalculatorState {
 		this.error = null;
 		this.cursor = 0;
 		this.historyIndex = -1;
-	}
+  }
+  
+/* ----------------------------- PRIVATE HELPERS ---------------------------- */
 }
 
 window.calculatorState = new CalculatorState();
