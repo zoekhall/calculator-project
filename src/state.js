@@ -138,6 +138,11 @@ class CalculatorState {
     this.justCalculated = false; 
     this.cursor = this.expression.length; 
   }
+
+  _appendToExpression(text) {
+    this.expression += text; 
+    this.cursor = this.expression.length; 
+  }
 }
 
 window.calculatorState = new CalculatorState();
