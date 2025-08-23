@@ -131,6 +131,13 @@ class CalculatorState {
       this.error = null;
     }
   }
+
+  _startFresh(newExpression) {
+    this.expression = newExpression; 
+    this.result = '';
+    this.justCalculated = false; 
+    this.cursor = this.expression.length; 
+  }
 }
 
 window.calculatorState = new CalculatorState();
