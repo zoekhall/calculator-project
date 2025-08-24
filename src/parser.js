@@ -1,14 +1,16 @@
 class ExpressionParser {
   tokenize(expression) { //split expression
+    const processedExpression = expression.replace(/π/g, Math.PI.toString()); //assign pi its value before tokenizing 
+    
     const tokens = [];
     let currentNumber = '';
 
-    for (let i = 0; i < expression.length; i++){
-      const char = expression[i];
+    for (let i = 0; i < processedExpression.length; i++) {
+			const char = processedExpression[i];
 
-      if ('0123456789.'.includes(char)) {
-        currentNumber += char; //building the number
-      } else if ('+-×÷'.includes(char)) {
+			if ('0123456789.'.includes(char)) {
+				currentNumber += char; //building the number
+			} else if ('+-×÷'.includes(char)) {
 				if (currentNumber) {
 					//if currentNumber is truthy
 					tokens.push(currentNumber); //push it as a token
@@ -16,7 +18,7 @@ class ExpressionParser {
 				}
 				tokens.push(char); //then push the operator
 			}
-    }
+		}
 
     if (currentNumber) {
       tokens.push(currentNumber); //add final number
