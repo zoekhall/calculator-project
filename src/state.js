@@ -54,22 +54,18 @@ class CalculatorState {
 	}
 
 	addOperator(op) {
-		if (this.error) {
-			this.error = null;
-		}
+    this._clearError();
 
 		if (this.justCalculated) {
-			this.expression = this.result + op; //if exp is empty, start with previous result (ANS)
-			this.justCalculated = false;
+      this._startFresh(this.result + op);
 		} else if (this.expression === '') {
-			this.expression = this.memory.ANS + op;
+			this._startFresh(this.memory.ANS + op);
 		} else if (this.operators.includes(this.expression.slice(-1))) {
-			this.expression = this.expression.slice(0, -1) + op; //replace last op with new op
+      this.expression = this.expression.slice(0, -1) + op;
+      this.cursor = this.expression.length; 
 		} else {
-			this.expression += op;
+      this._appendToExpression(op);
 		}
-
-		this.cursor = this.expression.length;
 	}
 
 	addConstant(constant) {
