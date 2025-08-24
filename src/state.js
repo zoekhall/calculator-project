@@ -36,16 +36,13 @@ class CalculatorState {
 
 /* ------------------------------ INPUT METHODS ----------------------------- */
 	addNum(num) {
-		if (this.error) {
-			this.error = null;
-		} else if (this.justCalculated) {
-			this.expression = num;
-			this.result = '';
-			this.justCalculated = false;
-		} else {
-			this.expression += num; //add num to expression string
-		}
-		this.cursor = this.expression.length;
+    this._clearError();
+
+    if (this.justCalculated) {
+      this._startFresh(num);
+    } else {
+      this._appendToExpression(num);
+    }
 	}
 
 	addDecimal() {
