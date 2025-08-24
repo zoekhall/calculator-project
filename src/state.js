@@ -46,13 +46,10 @@ class CalculatorState {
 	}
 
 	addDecimal() {
-		if (this.error) {
-			this.error = null;
-		}
+		this._clearError();
 
 		if (!this.getCurrentNum().includes('.')) {
-			this.expression += '.';
-			this.cursor = this.expression.length;
+			this._appendToExpression('.')
 		}
 	}
 
