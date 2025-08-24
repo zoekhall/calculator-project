@@ -69,19 +69,13 @@ class CalculatorState {
 	}
 
 	addConstant(constant) {
-		if (this.error) {
-			this.error = null;
-		}
+    this._clearError();
 
 		if (this.justCalculated) {
-			this.expression = constant;
-			this.result = '';
-			this.justCalculated = false;
+      this._startFresh(constant);
 		} else {
-			this.expression += constant;
+      this._appendToExpression(constant);
 		}
-
-		this.cursor = this.expression.length;
 	}
 
 /* ------------------------------- CALCULATING ------------------------------ */
