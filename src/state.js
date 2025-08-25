@@ -91,8 +91,11 @@ class CalculatorState {
         const result = this._calculateFunction(func, parseFloat(currentNum));
         const beforeNum = this.expression.substring(0, this.expression.lastIndexOf(currentNum));
         this.expression = beforeNum + result.toString();
+        this.cursor = this.expression.length;
       }
-		}
+    }
+    this.result = this.expression; 
+    this.justCalculated = true; 
   }
 
 /* ------------------------------- CALCULATING ------------------------------ */
@@ -148,6 +151,7 @@ class CalculatorState {
   _calculateFunction(func, value) {
     switch (func) {
       case 'sqrt': return Math.sqrt(value);
+      default: return value; 
     }
   }
 }

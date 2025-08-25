@@ -55,7 +55,7 @@ class Calculator {
         this.state.addConstant('π');
         break;
       case 'sqrt':
-        this.state.applyFunction('√');
+        this.state.applyFunction('sqrt');
         break;
       default:
         console.log('Action not implemented', action);
