@@ -144,6 +144,12 @@ class CalculatorState {
     this.expression += text; 
     this.cursor = this.expression.length; 
   }
+
+  _calculateFunction(func, value) {
+    switch (func) {
+      case 'sqrt': return Math.sqrt(value);
+    }
+  }
 }
 
 window.calculatorState = new CalculatorState();
