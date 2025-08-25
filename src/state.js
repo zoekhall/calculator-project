@@ -76,7 +76,17 @@ class CalculatorState {
 		} else {
       this._appendToExpression(constant);
 		}
-	}
+  }
+  
+  addFunction(func) {
+    this._clearError();
+
+    if (this.justCalculated) {
+      this._startFresh(func + '(');
+    } else {
+      this._appendToExpression(func + '(');
+    }
+  }
 
 /* ------------------------------- CALCULATING ------------------------------ */
 	calculate() {

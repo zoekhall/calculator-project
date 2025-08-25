@@ -1,6 +1,8 @@
 class ExpressionParser {
   tokenize(expression) { //split expression
-    const processedExpression = expression.replace(/π/g, Math.PI.toString()); //assign pi its value before tokenizing 
+    const processedExpression = expression
+			.replace(/π/g, Math.PI.toString()) //assign pi its value before tokenizing
+	
     
     const tokens = [];
     let currentNumber = '';
