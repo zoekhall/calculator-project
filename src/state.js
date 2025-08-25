@@ -78,14 +78,21 @@ class CalculatorState {
 		}
   }
   
-  addFunction(func) {
+  applyFunction(func) {
     this._clearError();
-
-    if (this.justCalculated) {
-      this._startFresh(func + '(');
-    } else {
-      this._appendToExpression(func + '(');
-    }
+    
+    //apply to previous result
+    if (this.expression === '' || this.justCalculated) {
+      const value = this.result || this.memory.ANS;
+      this._startFresh(this._calculateFunction(func, parseFloat(value)).toString());
+    } else { //apply to current number
+      const currentNum = this.getCurrentNum();
+      if (currentNum) {
+        const result = this._calculateFunction(func, parseFloat(currentNum));
+        const beforeNum = this.expression.substring(0, this.expression.lastIndexOf(currentNum));
+        this.expression = beforeNum + result.toString();
+      }
+		}
   }
 
 /* ------------------------------- CALCULATING ------------------------------ */
