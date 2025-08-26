@@ -12,7 +12,7 @@ class ExpressionParser {
 
 			if ('0123456789.'.includes(char)) {
 				currentNumber += char; //building the number
-			} else if ('+-×÷'.includes(char)) {
+			} else if ('+-×÷()'.includes(char)) {
 				if (currentNumber) {
 					//if currentNumber is truthy
 					tokens.push(currentNumber); //push it as a token

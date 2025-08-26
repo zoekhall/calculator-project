@@ -60,6 +60,12 @@ class Calculator {
       case 'square':
         this.state.applyFunction('square');
         break;
+      case 'paren-open':
+        this.state.addOperator('(');
+        break;
+      case 'paren-close':
+        this.state.addOperator(')');
+        break;
       default:
         console.log('Action not implemented', action);
     }
