@@ -57,6 +57,9 @@ class Calculator {
       case 'sqrt':
         this.state.applyFunction('sqrt');
         break;
+      case 'square':
+        this.state.applyFunction('square');
+        break;
       default:
         console.log('Action not implemented', action);
     }
