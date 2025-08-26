@@ -151,6 +151,7 @@ class CalculatorState {
   _calculateFunction(func, value) {
     switch (func) {
       case 'sqrt': return Math.sqrt(value);
+      case 'square': return value * value; 
       default: return value; 
     }
   }
