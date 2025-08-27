@@ -66,6 +66,8 @@ class Calculator {
       case 'paren-close':
         this.state.addOperator(')');
         break;
+      case 'negative':
+        this.state.addOperator('-');
       default:
         console.log('Action not implemented', action);
     }
