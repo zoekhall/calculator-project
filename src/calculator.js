@@ -78,6 +78,9 @@ class Calculator {
       case 'log':
         this.state.applyFunction('log');
         break;
+      case 'sin':
+        this.state.applyFunction('sin');
+        break;
       default:
         console.log('Action not implemented', action);
     }

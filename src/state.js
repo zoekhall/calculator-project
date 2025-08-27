@@ -154,6 +154,7 @@ class CalculatorState {
       case 'square': return value * value; 
       case 'ln': return Math.log(value);
       case 'log': return Math.log10(value);
+      case 'sin': return Math.sin(value * Math.PI / 180);
       default: return value; 
     }
   }
