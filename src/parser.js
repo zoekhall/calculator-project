@@ -2,7 +2,7 @@ class ExpressionParser {
   tokenize(expression) { //split expression
     const processedExpression = expression
 			.replace(/π/g, Math.PI.toString()) //assign pi its value before tokenizing
-			// .replace(/√\(/g, 'sqrt('); //
+			.replace(/e/g, Math.E.toString()) //assign e its value 
     
     const tokens = [];
     let currentNumber = '';
