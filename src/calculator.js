@@ -68,10 +68,16 @@ class Calculator {
         break;
       case 'negative':
         this.state.addOperator('-');
+        break;
       case 'exp':
         this.state.addConstant('e');
+        break;
       case 'ln':
         this.state.applyFunction('ln');
+        break;
+      case 'log':
+        this.state.applyFunction('log');
+        break;
       default:
         console.log('Action not implemented', action);
     }

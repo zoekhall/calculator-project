@@ -153,6 +153,7 @@ class CalculatorState {
       case 'sqrt': return Math.sqrt(value);
       case 'square': return value * value; 
       case 'ln': return Math.log(value);
+      case 'log': return Math.log10(value);
       default: return value; 
     }
   }
