@@ -152,6 +152,7 @@ class CalculatorState {
     switch (func) {
       case 'sqrt': return Math.sqrt(value);
       case 'square': return value * value; 
+      case 'ln': return Math.log(value);
       default: return value; 
     }
   }

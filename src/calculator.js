@@ -70,6 +70,8 @@ class Calculator {
         this.state.addOperator('-');
       case 'exp':
         this.state.addConstant('e');
+      case 'ln':
+        this.state.applyFunction('ln');
       default:
         console.log('Action not implemented', action);
     }
