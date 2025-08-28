@@ -84,6 +84,8 @@ class Calculator {
       case 'cos':
         this.state.applyFunction('cos');
         break;
+      case 'tan':
+        this.state.applyFunction('tan');
       default:
         console.log('Action not implemented', action);
     }
