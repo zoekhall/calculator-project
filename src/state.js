@@ -158,6 +158,7 @@ class CalculatorState {
       case 'cos': return Math.cos((value * Math.PI) / 180);
       case 'tan': return Math.tan(value * Math.PI / 180);
       case 'reciprocal': return 1 / value; 
+      case 'abs': return Math.abs(value);
       default: return value; 
     }
   }

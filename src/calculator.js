@@ -90,6 +90,9 @@ class Calculator {
       case 'reciprocal':
         this.state.applyFunction('reciprocal');
         break;
+      case 'abs':
+        this.state.applyFunction('abs');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
