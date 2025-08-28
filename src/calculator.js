@@ -93,6 +93,9 @@ class Calculator {
       case 'abs':
         this.state.applyFunction('abs');
         break;
+      case 'clear-memory':
+        this.state.clearMemory();
+        break; 
 			default:
 				console.log('Action not implemented', action);
 		}

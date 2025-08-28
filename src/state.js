@@ -162,6 +162,10 @@ class CalculatorState {
       default: return value; 
     }
   }
+
+  clearMemory() {
+    this.memory.ANS = 0;
+  }
 }
 
 window.calculatorState = new CalculatorState();
