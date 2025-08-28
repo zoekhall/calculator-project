@@ -155,6 +155,7 @@ class CalculatorState {
       case 'ln': return Math.log(value);
       case 'log': return Math.log10(value);
       case 'sin': return Math.sin(value * Math.PI / 180);
+      case 'cos': return Math.cos((value * Math.PI) / 180);
       default: return value; 
     }
   }
