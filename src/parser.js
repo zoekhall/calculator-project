@@ -34,7 +34,9 @@ class ExpressionParser {
 
     let current = [...tokens];
 
-    
+    while (current.includes('(')) {
+      this._evaluateParentheses(current);
+    }
 
     const calculateResult = (left, op, right) => {
       switch (op) {
@@ -71,6 +73,21 @@ class ExpressionParser {
     }
     
     return parseFloat(current[0])
+  }
+
+  //take another look at this
+  _evaluateParentheses(tokens) {
+    let openIndex = -1; 
+    for (let i = 0; i < tokens.length; i++){
+      if (tokens[i] === '(') {
+        openIndex = i; 
+      } else if (tokens[i] === ')') {
+        const inside = tokens.slice(openIndex + 1, i);
+				const result = this.evaluate(inside);
+				tokens.splice(openIndex, i - openIndex + 1, result.toString());
+				return;
+      }
+    }
   }
 }
 
