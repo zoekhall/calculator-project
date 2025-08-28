@@ -30,65 +30,69 @@ class Calculator {
 
   handleAction(action) {
     switch (action) {
-      case 'clear':
-        this.state.clear();
+			case 'clear':
+				this.state.clear();
+				break;
+			case 'decimal':
+				this.state.addDecimal();
+				break;
+			case 'add':
+				this.state.addOperator('+');
+				break;
+			case 'subtract':
+				this.state.addOperator('-');
+				break;
+			case 'divide':
+				this.state.addOperator('÷');
+				break;
+			case 'multiply':
+				this.state.addOperator('×');
+				break;
+			case 'equals':
+				this.state.calculate();
+				break;
+			case 'pi':
+				this.state.addConstant('π');
+				break;
+			case 'sqrt':
+				this.state.applyFunction('sqrt');
+				break;
+			case 'square':
+				this.state.applyFunction('square');
+				break;
+			case 'paren-open':
+				this.state.addOperator('(');
+				break;
+			case 'paren-close':
+				this.state.addOperator(')');
+				break;
+			case 'negative':
+				this.state.addOperator('-');
+				break;
+			case 'exp':
+				this.state.addConstant('e');
+				break;
+			case 'ln':
+				this.state.applyFunction('ln');
+				break;
+			case 'log':
+				this.state.applyFunction('log');
+				break;
+			case 'sin':
+				this.state.applyFunction('sin');
+				break;
+			case 'cos':
+				this.state.applyFunction('cos');
+				break;
+			case 'tan':
+				this.state.applyFunction('tan');
+				break;
+      case 'reciprocal':
+        this.state.applyFunction('reciprocal');
         break;
-      case 'decimal':
-        this.state.addDecimal();
-        break;
-      case 'add':
-        this.state.addOperator('+');
-        break;
-      case 'subtract':
-        this.state.addOperator('-');
-        break;
-      case 'divide':
-        this.state.addOperator('÷');
-        break;
-      case 'multiply':
-        this.state.addOperator('×');
-        break;
-      case 'equals':
-        this.state.calculate();
-        break;
-      case 'pi':
-        this.state.addConstant('π');
-        break;
-      case 'sqrt':
-        this.state.applyFunction('sqrt');
-        break;
-      case 'square':
-        this.state.applyFunction('square');
-        break;
-      case 'paren-open':
-        this.state.addOperator('(');
-        break;
-      case 'paren-close':
-        this.state.addOperator(')');
-        break;
-      case 'negative':
-        this.state.addOperator('-');
-        break;
-      case 'exp':
-        this.state.addConstant('e');
-        break;
-      case 'ln':
-        this.state.applyFunction('ln');
-        break;
-      case 'log':
-        this.state.applyFunction('log');
-        break;
-      case 'sin':
-        this.state.applyFunction('sin');
-        break;
-      case 'cos':
-        this.state.applyFunction('cos');
-        break;
-      case 'tan':
-        this.state.applyFunction('tan');
-      default:
-        console.log('Action not implemented', action);
-    }
+			default:
+				console.log('Action not implemented', action);
+		}
     this.display.update();
   }
 }

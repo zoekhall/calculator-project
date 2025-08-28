@@ -157,6 +157,7 @@ class CalculatorState {
       case 'sin': return Math.sin(value * Math.PI / 180);
       case 'cos': return Math.cos((value * Math.PI) / 180);
       case 'tan': return Math.tan(value * Math.PI / 180);
+      case 'reciprocal': return 1 / value; 
       default: return value; 
     }
   }
