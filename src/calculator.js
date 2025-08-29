@@ -102,6 +102,9 @@ class Calculator {
       case 'cube':
         this.state.applyFunction('cube');
         break;
+      case 'floor':
+        this.state.applyFunction('floor');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
