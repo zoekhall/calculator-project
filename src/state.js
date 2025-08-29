@@ -160,6 +160,7 @@ class CalculatorState {
       case 'reciprocal': return 1 / value; 
       case 'abs': return Math.abs(value);
       case 'percent': return value / 100; 
+      case 'cube': return value * value * value; 
       default: return value; 
     }
   }

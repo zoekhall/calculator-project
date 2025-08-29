@@ -99,6 +99,9 @@ class Calculator {
       case 'percent':
         this.state.applyFunction('percent');
         break;
+      case 'cube':
+        this.state.applyFunction('cube');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
