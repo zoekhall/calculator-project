@@ -159,6 +159,7 @@ class CalculatorState {
       case 'tan': return Math.tan(value * Math.PI / 180);
       case 'reciprocal': return 1 / value; 
       case 'abs': return Math.abs(value);
+      case 'percent': return value / 100; 
       default: return value; 
     }
   }

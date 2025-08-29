@@ -96,6 +96,9 @@ class Calculator {
       case 'clear-memory':
         this.state.clearMemory();
         break; 
+      case 'percent':
+        this.state.applyFunction('percent');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
