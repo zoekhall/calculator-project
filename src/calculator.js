@@ -105,6 +105,9 @@ class Calculator {
       case 'floor':
         this.state.applyFunction('floor');
         break;
+      case 'random':
+        this.state.addConstant(Math.random().toString());
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
