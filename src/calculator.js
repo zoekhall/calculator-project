@@ -114,6 +114,9 @@ class Calculator {
       case 'clear':
         this.state.clearAll();
         break; 
+      case 'factorial':
+        this.state.applyFunction('factorial');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}

@@ -164,6 +164,11 @@ class CalculatorState {
       case 'cube': return value * value * value; 
       case 'cuberoot': return Math.cbrt(value);
       case 'floor': return Math.floor(value);
+      case 'factorial':
+        if (value < 0 || value !== Math.floor(value)) return NaN;
+        let result = 1;
+        for (let i = 2; i <= value; i++) result *= i;
+        return result;
       default: return value; 
     }
   }
