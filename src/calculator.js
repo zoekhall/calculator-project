@@ -117,6 +117,9 @@ class Calculator {
       case 'factorial':
         this.state.applyFunction('factorial');
         break;
+      case 'pow10':
+        this.state.applyFunction('pow10');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
