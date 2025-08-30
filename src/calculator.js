@@ -102,6 +102,9 @@ class Calculator {
       case 'cube':
         this.state.applyFunction('cube');
         break;
+      case 'cuberoot':
+        this, state, applyFunction('cuberoot');
+        break;
       case 'floor':
         this.state.applyFunction('floor');
         break;

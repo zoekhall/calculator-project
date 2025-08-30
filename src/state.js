@@ -162,6 +162,7 @@ class CalculatorState {
       case 'abs': return Math.abs(value);
       case 'percent': return value / 100; 
       case 'cube': return value * value * value; 
+      case 'cuberoot': return Math.cbrt(value);
       case 'floor': return Math.floor(value);
       default: return value; 
     }
