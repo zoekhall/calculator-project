@@ -121,12 +121,13 @@ class CalculatorState {
 		}
 	}
 
-	clear() {
+	clearAll() {
 		this.expression = '';
 		this.result = '';
 		this.error = null;
 		this.cursor = 0;
-		this.historyIndex = -1;
+    this.historyIndex = -1;
+    this.memory.ANS = 0; 
   }
   
   /* ----------------------------- PRIVATE HELPERS ---------------------------- */

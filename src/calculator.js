@@ -108,6 +108,9 @@ class Calculator {
       case 'random':
         this.state.addConstant(Math.random().toString());
         break;
+      case 'clear':
+        this.state.clearAll();
+        break; 
 			default:
 				console.log('Action not implemented', action);
 		}
