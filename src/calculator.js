@@ -120,6 +120,9 @@ class Calculator {
       case 'pow10':
         this.state.applyFunction('pow10');
         break;
+      case 'exp':
+        this.getDisplayState.applyFunction('exp');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
