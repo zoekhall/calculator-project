@@ -129,6 +129,9 @@ class Calculator {
       case 'round':
         this.state.applyFunction('round');
         break;
+      case 'sign':
+        this.state.applyFunction('sign');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
