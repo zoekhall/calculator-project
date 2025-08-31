@@ -166,6 +166,7 @@ class CalculatorState {
       case 'floor': return Math.floor(value);
       case 'pow10': return Math.pow(10, value);
       case 'exp': return Math.exp(value);
+      case 'pow2': return Math.pow(2, value);
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
