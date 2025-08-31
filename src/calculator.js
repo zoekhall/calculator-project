@@ -126,6 +126,9 @@ class Calculator {
       case 'pow2':
         this.state.applyFunction('pow2');
         break;
+      case 'round':
+        this.state.applyFunction('round');
+        break;
 			default:
 				console.log('Action not implemented', action);
 		}
