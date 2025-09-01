@@ -170,6 +170,7 @@ class CalculatorState {
       case 'round': return Math.round(value);
       case 'sign': return Math.sign(value);
       case 'sinh': return Math.sinh(value);
+      case 'cosh': return Math.cosh(value);
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;

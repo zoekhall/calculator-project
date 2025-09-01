@@ -135,6 +135,9 @@ class Calculator {
 			case 'sinh':
 				this.state.applyFunction('sinh');
 				break;
+			case 'cosh':
+				this.state.applyFunction('cosh');
+				break;
 			default:
 				console.log('Action not implemented', action);
 		}
