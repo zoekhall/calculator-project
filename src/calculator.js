@@ -87,51 +87,54 @@ class Calculator {
 			case 'tan':
 				this.state.applyFunction('tan');
 				break;
-      case 'reciprocal':
-        this.state.applyFunction('reciprocal');
-        break;
-      case 'abs':
-        this.state.applyFunction('abs');
-        break;
-      case 'clear-memory':
-        this.state.clearMemory();
-        break; 
-      case 'percent':
-        this.state.applyFunction('percent');
-        break;
-      case 'cube':
-        this.state.applyFunction('cube');
-        break;
-      case 'cuberoot':
-        this, state, applyFunction('cuberoot');
-        break;
-      case 'floor':
-        this.state.applyFunction('floor');
-        break;
-      case 'random':
-        this.state.addConstant(Math.random().toString());
-        break;
-      case 'clear':
-        this.state.clearAll();
-        break; 
-      case 'factorial':
-        this.state.applyFunction('factorial');
-        break;
-      case 'pow10':
-        this.state.applyFunction('pow10');
-        break;
-      case 'exp':
-        this.getDisplayState.applyFunction('exp');
-        break;
-      case 'pow2':
-        this.state.applyFunction('pow2');
-        break;
-      case 'round':
-        this.state.applyFunction('round');
-        break;
-      case 'sign':
-        this.state.applyFunction('sign');
-        break;
+			case 'reciprocal':
+				this.state.applyFunction('reciprocal');
+				break;
+			case 'abs':
+				this.state.applyFunction('abs');
+				break;
+			case 'clear-memory':
+				this.state.clearMemory();
+				break;
+			case 'percent':
+				this.state.applyFunction('percent');
+				break;
+			case 'cube':
+				this.state.applyFunction('cube');
+				break;
+			case 'cuberoot':
+				this, state, applyFunction('cuberoot');
+				break;
+			case 'floor':
+				this.state.applyFunction('floor');
+				break;
+			case 'random':
+				this.state.addConstant(Math.random().toString());
+				break;
+			case 'clear':
+				this.state.clearAll();
+				break;
+			case 'factorial':
+				this.state.applyFunction('factorial');
+				break;
+			case 'pow10':
+				this.state.applyFunction('pow10');
+				break;
+			case 'exp':
+				this.getDisplayState.applyFunction('exp');
+				break;
+			case 'pow2':
+				this.state.applyFunction('pow2');
+				break;
+			case 'round':
+				this.state.applyFunction('round');
+				break;
+			case 'sign':
+				this.state.applyFunction('sign');
+				break;
+			case 'sinh':
+				this.state.applyFunction('sinh');
+				break;
 			default:
 				console.log('Action not implemented', action);
 		}
