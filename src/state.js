@@ -172,6 +172,7 @@ class CalculatorState {
       case 'sinh': return Math.sinh(value);
       case 'cosh': return Math.cosh(value);
       case 'tanh': return Math.tanh(value);
+      case 'torad': return value * Math.PI / 180;
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;

@@ -137,10 +137,13 @@ class Calculator {
 				break;
 			case 'cosh':
 				this.state.applyFunction('cosh');
-        break;
-      case 'tanh':
-        this.state.applyFunction('tanh');
-        break;
+				break;
+			case 'tanh':
+				this.state.applyFunction('tanh');
+				break;
+			case 'torad':
+				this.state.applyFunction('torad');
+				break;
 			default:
 				console.log('Action not implemented', action);
 		}
