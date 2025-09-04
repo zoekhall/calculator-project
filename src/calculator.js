@@ -144,6 +144,9 @@ class Calculator {
 			case 'torad':
 				this.state.applyFunction('torad');
 				break;
+			case 'todeg':
+				this.state.applyFunction('todeg');
+				break;
 			default:
 				console.log('Action not implemented', action);
 		}

@@ -173,6 +173,7 @@ class CalculatorState {
       case 'cosh': return Math.cosh(value);
       case 'tanh': return Math.tanh(value);
       case 'torad': return value * Math.PI / 180;
+      case 'todeg': return value * 180 / Math.PI;
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
