@@ -147,6 +147,9 @@ class Calculator {
 			case 'todeg':
 				this.state.applyFunction('todeg');
 				break;
+			case 'log2':
+				this.state.applyFunction('log2');
+				break;
 			default:
 				console.log('Action not implemented', action);
 		}
