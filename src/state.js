@@ -177,6 +177,7 @@ class CalculatorState {
       case 'log2': return Math.log2(value);
       case 'trunc': return Math.trunc(value);
       case 'max': return Math.max(value, this.memory.ANS);
+      case 'min': return Math.min(value, this.memory.ANS);
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
