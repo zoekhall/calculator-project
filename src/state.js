@@ -179,6 +179,7 @@ class CalculatorState {
       case 'max': return Math.max(value, this.memory.ANS);
       case 'min': return Math.min(value, this.memory.ANS);
       case 'sqrt2': return Math.SQRT2;
+      case 'halfpi': return Math.PI / 2;
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
