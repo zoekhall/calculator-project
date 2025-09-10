@@ -180,6 +180,7 @@ class CalculatorState {
       case 'min': return Math.min(value, this.memory.ANS);
       case 'sqrt2': return Math.SQRT2;
       case 'halfpi': return Math.PI / 2;
+      case 'cbrt': return Math.cbrt(value);
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
