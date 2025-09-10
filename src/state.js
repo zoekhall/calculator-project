@@ -182,7 +182,7 @@ class CalculatorState {
       case 'halfpi': return Math.PI / 2;
       case 'cbrt': return Math.cbrt(value);
       case 'log1p': return Math.log1p(value);
-
+      case 'expm1': return Math.expm1(value);
       case 'factorial':
         if (value < 0 || value !== Math.floor(value)) return NaN;
         let result = 1;
